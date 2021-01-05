@@ -1,4 +1,4 @@
-# PASSO A PASSO
+# PASSO A PASSO NO TERMINAL
 
 passo a passo para salvar no gitHub
 1. criar nova pasta: touch nomedapasta.txt
