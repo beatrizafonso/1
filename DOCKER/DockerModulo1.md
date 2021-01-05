@@ -10,4 +10,3 @@ Torna tudo mais fácil para a instalação e a execução de software sem se pre
 2. O que é container?
 
 É um programa com seu próprio conjunto isolado de recursos de hardware.
-
