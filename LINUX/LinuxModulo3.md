@@ -71,8 +71,54 @@ _'shift + Q' + digitar 'wq!' + enter : para sair do editor_
 
 # Aula 45
 
-- comandos para encontrar arquivos e diretórios
+- comandos para encontrar arquivos e pastas
 
-> ~$ find 
+> ~$ find . -name "'nome do arquivo/pasta'"
 
-> ~$ locate
+> ~$ find / -name "'nome do arquivo'"  : quando não se sabe o diretório, esse comando procura em 'root'. (precisa da permissão do su)
+
+> ~$ locate 'nome do arquivo/pasta'
+
+- obs: o 'locate' é mais rápido que o 'find', porém precisa atualizar sempre que criar um novo arquivo ou pasta:
+
+> ~$ sudo updatedb
+
+- Quando a permissão for negada:
+
+> ~$ su -
+
+# Aula 46
+
+- diferença entre 'find' e 'locate':
+
+_'locate' tem um banco de dados (e precisa ser atualizado regularmente), já 'find' procura o arquivo dentro do sistema.
+
+# Aula 47 
+
+- Alterando a senha
+
+> ~$ passwd 'userid'
+
+# Aula 48
+
+- Curingas
+
+_Um curinga é um caractere que pode ser usado como substituto para qualquer classe de caracteres em uma pesquisa_
+
+1. '*' : representa o zero ou mais caracteres
+
+2. ? : representa um único caractere
+
+3. {} : representa um intervalo de caracteres 
+
+> ~$ touch pasta{1..9} : irá criar 9 pastas (pasta1, pasta2... pasta9)
+
+> ~$ ls -l pasta* : irá imprimir todas as pastas que comçam com 'pasta'
+
+> ~$ ls -l ?asta* : irá imprimir todos os arquivos, independente do primeiro caractere, que tenha 'asta' e qualquer coisa depois
+
+> ~$ ls -l * [cd] * : imprime qualquer pasta que tenh 'cd' no meio 
+
+# Aula 49 
+
+- soft link e hard link 
