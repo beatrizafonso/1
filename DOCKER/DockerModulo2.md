@@ -45,3 +45,27 @@ Irá aparecer pastas que estarão dentro do seu container
 > ~$ docker start -a 'container id'
 
 _-a : fará com que o docker observe a saída do container e imprima no terminal_
+
+# Aula 19
+
+1. Remover todos os containers:
+
+> ~$ docker system prune
+
+# Aula 20
+
+> ~$ docker logs 'container id'
+
+_logs: utilizado para examinar um container e recuperar todas as informações que foram emitidas a partir dele_
+
+# Aula 21
+
+1. parar um cantainer que está sendo executado:
+
+> ~$ docker stop 'container id'
+
+_stop: dá um tempo para o container encerrar e fazer uma limpeza (ideal)_
+
+> ~$ docker kill 'container id'
+
+_kill: encerra imediatamente o container sem fazer nenhum trabalho adicional_
