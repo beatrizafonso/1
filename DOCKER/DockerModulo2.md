@@ -106,3 +106,4 @@ S
 
 # Aula 27 
 
+Tomar cuidado ao abrir o prompt de comando de um cantêiner específico em dois terminais, as mudanças que serão feitas em um não parecerá no outro.
