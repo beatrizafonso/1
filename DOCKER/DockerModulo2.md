@@ -68,4 +68,41 @@ _stop: dá um tempo para o contêiner encerrar e fazer uma limpeza (ideal)_
 
 > ~$ docker kill 'container id'
 
-_kill: encerra imediatamente o contêiner sem fazer nenhum trabalho adicional_
+_kill: encerra imediatamente o contêiner sem fazer nenhum trabalho adicional (utilizar quando o 'stop' não funcionar)_
+
+# Aula 23
+
+1. Como executar comandos dentro de um contêiner em execução?
+
+> ~$ docker exec -it 'container id' 'command'
+
+_exec: executar um comando adicional dentro de um contêiner_
+
+_-it = '-i' + '-t' : permite digitar a entrada diretamente no contêiner_
+
+# Aula 24
+
+_-i: garante que qualquer coisa quer vocẽ digite seja direcionado ao comando digitado_
+
+_-t: garante que o comando apareça bem formatado_
+
+# Aula 25 
+
+1. Como abrir um prompt de comando dentro de um contêiner (para não precisar digitar 'docker exec' seguidamente)
+
+Depois que o contêiner estiver rodando abrir um segundo terminal e colocar:
+
+> ~$ docker exec -it 'container id' sh
+
+_sh: é um programa que nos permite digitar comando e executá-los dentro de uma contêiner_
+
+Para sair do prompt de comando: 'ctrl + D' ou 'exit'
+
+# Aula 26 
+
+1. Executar e abrir o prompt de comando dentro do contêiner:
+S
+> ~$ docker run -it 'image name' sh 
+
+# Aula 27 
+
