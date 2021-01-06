@@ -69,7 +69,7 @@ _'shift + Q' + digitar 'wq!' + enter : para sair do editor_
 
 > ~$ mkdir 'nome da pasta'
 
-# Aula 44
+# Aula 45
 
 - comandos para encontrar arquivos e diretórios
 
