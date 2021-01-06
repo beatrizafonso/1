@@ -1,6 +1,6 @@
 # Aula 32
 - abrir o terminal: ctrl + alt + T
-- propt travado,  para recuperar: ctrl + C
+- prompt travado,  para recuperar: ctrl + C
 
 # Aula 38
 
