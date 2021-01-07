@@ -121,4 +121,25 @@ _Um curinga é um caractere que pode ser usado como substituto para qualquer cla
 
 # Aula 49 
 
-- soft link e hard link 
+_inode: ponto ou número de um arquivo no 'hard disk'_ 
+
+_soft link: link que vai ser removido se um arquivo for removido ou renomeado_
+
+_hard link: deletando, renomeando ou movendo o arquivo original não vai afetar o 'hard link'_
+
+- criar um hard link:
+
+> ~$ ln 
+
+- criar um soft link:
+
+> ~$ ln -s
+
+- escrever dentro de um arquivo:
+
+> ~$ echo "'qualquer coisa aqui'" > 'nome do arquivo'  
+> ~$ echo "'comentário adicional'" >> 'nome do arquivo'
+
+- imprimir o que está escrito:
+
+> ~$ cat 'nome do arquivo'
