@@ -91,7 +91,7 @@ _'shift + Q' + digitar 'wq!' + enter : para sair do editor_
 
 - diferença entre 'find' e 'locate':
 
-_'locate' tem um banco de dados (e precisa ser atualizado regularmente), já 'find' procura o arquivo dentro do sistema.
+_'locate' tem um banco de dados (e precisa ser atualizado regularmente), já 'find' procura o arquivo dentro do sistema._
 
 # Aula 47 
 
@@ -129,11 +129,11 @@ _hard link: deletando, renomeando ou movendo o arquivo original não vai afetar 
 
 - criar um hard link:
 
-> ~$ ln 
+> ~$ ln 'nome do arquivo'
 
 - criar um soft link:
 
-> ~$ ln -s
+> ~$ ln -s 'nome do arquivo'
 
 - escrever dentro de um arquivo:
 
