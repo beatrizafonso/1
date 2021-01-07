@@ -11,21 +11,21 @@ Para mostrar todos os diretórios e arquivos que estão começando com '/' :
 
 # Aula 39
 
-Pastas importantes
+diretórios importantes
 1. /boot : contém os arquivos usados para o gerenciador de inicialização;
-2. /root : pasta inicial do usuário;
+2. /root : diretório inicial do usuário;
 3. /dev : contém os os dispositivos do sitema.. drives, disco etc
 4. /etc : contém toda a configuração dos arquivos/aplicativos... é possivel modificar os arquivos (emails,etc) com /etc
 
 # Aula 40
 
-- Quais os comandos para ir de uma pasta a outra.
+- Quais os comandos para ir de um diretório a outra.
 
 1. mudança de diretório:
 > ~$ cd
-2. 'print working diretory': informa qual pasta você esta atualmente
+2. 'print working diretory': informa qual diretório você esta atualmente
 > ~$ pwd
-3. Lista o conteúdo de uma pasta ou arquivo
+3. Lista o conteúdo de um diretório ou arquivo
 > ~$ ls -l
 
 _cd .. : um diretório atrás_
@@ -49,37 +49,37 @@ _cd / : voltar ao direorio principal_
  tipo de arquivo - quantidade de links - proprietário - grupo - tamanho - mês - dia - horário - nome
 
 primeira coluna - quando começa com:
-- 'd' : pasta
+- 'd' : diretório
 - 'l' : link 
 - '-' : arquivo
 
 # Aula 43
 
-1. Criando pastas:
+1. Criando diretórios:
 
-> ~$ touch 'nome do arquivo' : cria um arquivo vazio
+> ~$ touch 'arquivo' : cria um arquivo vazio
 
-> ~$ cp 'nome do arquivo' 'nome da pasta de destinação' : copia um arquivo ja existente 
+> ~$ cp 'arquivo' 'diretório de destinação' : copia um arquivo ja existente 
 
-> ~$ vi 'nome da arquivo' : cria um arquivo e abre um editor
+> ~$ vi 'arquivo' : cria um arquivo e abre um editor
 
 _'shift + Q' + digitar 'wq!' + enter : para sair do editor_
 
-2. Criando pastas:
+2. Criando diretórios:
 
-> ~$ mkdir 'nome da pasta'
+> ~$ mkdir 'diretório'
 
 # Aula 45
 
-- comandos para encontrar arquivos e pastas
+- comandos para encontrar arquivos e diretórios
 
-> ~$ find . -name "'nome do arquivo/pasta'"
+> ~$ find . -name "'arquivo/diretório'"
 
-> ~$ find / -name "'nome do arquivo'"  : quando não se sabe o diretório, esse comando procura em 'root'. (precisa da permissão do su)
+> ~$ find / -name "'arquivo'"  : quando não se sabe o diretório, esse comando procura em 'root'. (precisa da permissão do su)
 
-> ~$ locate 'nome do arquivo/pasta'
+> ~$ locate 'arquivo/diretório'
 
-- obs: o 'locate' é mais rápido que o 'find', porém precisa atualizar sempre que criar um novo arquivo ou pasta:
+- obs: o 'locate' é mais rápido que o 'find', porém precisa atualizar sempre que criar um novo arquivo ou diretório:
 
 > ~$ sudo updatedb
 
@@ -111,13 +111,13 @@ _Um curinga é um caractere que pode ser usado como substituto para qualquer cla
 
 3. {} : representa um intervalo de caracteres 
 
-> ~$ touch pasta{1..9} : irá criar 9 pastas (pasta1, pasta2... pasta9)
+> ~$ touch diretório{1..9} : irá criar 9 diretórios (diretório1, diretório2... diretório9)
 
-> ~$ ls -l pasta* : irá imprimir todas as pastas que comçam com 'pasta'
+> ~$ ls -l diretório* : irá imprimir todos os diretórios que começam com 'diretório'
 
 > ~$ ls -l ?asta* : irá imprimir todos os arquivos, independente do primeiro caractere, que tenha 'asta' e qualquer coisa depois
 
-> ~$ ls -l * [cd] * : imprime qualquer pasta que tenh 'cd' no meio 
+> ~$ ls -l * [cd] * : imprime qualquer diretório que tenh 'cd' no meio 
 
 # Aula 49 
 
@@ -129,17 +129,17 @@ _hard link: deletando, renomeando ou movendo o arquivo original não vai afetar 
 
 - criar um hard link:
 
-> ~$ ln 'nome do arquivo'
+> ~$ ln 'arquivo'
 
 - criar um soft link:
 
-> ~$ ln -s 'nome do arquivo'
+> ~$ ln -s 'arquivo'
 
 - escrever dentro de um arquivo:
 
-> ~$ echo "'qualquer coisa aqui'" > 'nome do arquivo'  
-> ~$ echo "'comentário adicional'" >> 'nome do arquivo'
+> ~$ echo "'qualquer coisa aqui'" > 'arquivo'  
+> ~$ echo "'comentário adicional'" >> 'arquivo'
 
 - imprimir o que está escrito:
 
-> ~$ cat 'nome do arquivo'
+> ~$ cat 'arquivo'

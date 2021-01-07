@@ -14,11 +14,11 @@
 
 - exemplo: docker run busybox echo hi there
 
-_ls: irá aparecer todos os arquivos e pastas dentro de um determinado diretório_
+_ls: irá aparecer todos os arquivos e diretórios dentro de um determinado diretório_
 
 - exemplo: docker run busybox ls
 
-Irá aparecer pastas que estarão dentro do seu contêiner
+Irá aparecer diretórios que estarão dentro do seu contêiner
 
 # Aula 16
 
