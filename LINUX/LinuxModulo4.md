@@ -59,7 +59,7 @@ significado dos números:
 7 = r+w+x
 
 ordem dos dígitos _ _ _:  
-primeiro dígito: usuário
+primeiro dígito: usuário  
 segundo dígito: grupo  
 terceiro dígito: outros
 
