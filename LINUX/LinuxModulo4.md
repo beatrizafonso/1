@@ -68,3 +68,62 @@ _significado: usuário pode ler, escrever e executar; grupo pode ler e escreve; 
 
 # Aula 56 
 
+- comandos para mudar o proprietário de um arquivo:
+
+1. chown : muda o proprietário 
+2. chgrp : muda o grupo proprietário
+
+mudar o proprietário:
+
+> ~$ chown 'novo proprietário' 'arquivo'
+
+mudar o grupo:
+
+> ~$ chgrp 'novo grupo' 'arquivo'
+
+_obs: antes de mudar o proprietário/grupo é necessário obter autorização do su, colocando o comando 'su -' e rodando antes, ou colocando 'sudo' antes do comando_
+
+# Aula 57 
+
+- *Lista de controle de acessos* : é possível dar permissão a um usuário particular para ler um arquivo, sem precisar permitir para todos os outros.
+
+Comandos:
+
+1. setfacl : define  a maneira que vc quer que seja a permissão
+
+2. getfacl : da a informação sobre as permissões existente em um arquivo
+
+Para ver quem tem permissão 
+
+> getfacl 'arquivo'
+
+Adicionar permissão ao usuário
+
+> setfacl -m u:'user':rwx /caminho/para/arquivo  
+_-m : para modificar a permissão_
+
+Adicionar permissão ao grupo 
+
+> setfacl -m g:'grupo':rw /caminho/para/arquivo
+
+Para permitir que todos os arquivos/diretórios herdem entradas do ACL do diretório em que estão 
+
+> setfacl -rm "entry" /caminho/para/diretório
+
+Para remover uma entrada específica para um usuário específico
+
+> setfacl -x u:'user' /caminho/para/arquivo
+
+remover todas as permissões a todos 
+
+> setfacl -b /caminho/para/arquivo
+
+# Aula 58 
+
+Comandos de ajuda:
+
+> ~$ whatis 'comando' : informações sobre o comando  
+> ~$ 'comando' --help : mais detalhes sobre o comando  
+> ~$ man 'comando' : manual do comando, imprime uma lista de comandos que podem ser utilizados  
+
+# Aula 59
