@@ -40,4 +40,38 @@ Comandos adicionais
 
 - _-v /app/node_modules : como apagamos a pasta 'node_modules' é necessário colocar esse comando_
 
-# Aula 76
+# Aula 77 - 78 
+
+Para facilitar o código acima vamos usar dockercompse.yml
+
+version: '3'
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+     - "3000:3000"
+    volumes: 
+     - /app/node_modules
+     - .:/app
+
+Assim, basta rodar:
+
+> ~$ docker-compose up
+
+# Aula 81
+
+> docker build -f Dockerfile.dev .
+
+> docker run -it 'image ID' npm run test
+
+# Aula 82
+
+em um terminal:
+
+> ~$ docker-compose up 
+
+em outro terminal:
+
+> ~$ docker exec -it 'conteiner ID' npm run test
