@@ -44,17 +44,20 @@ Comandos adicionais
 
 Para facilitar o código acima vamos usar dockercompse.yml
 
-version: '3'
-services:
-  web:
-    build: 
-      context: .
-      dockerfile: Dockerfile.dev
-    ports:
-     - "3000:3000"
-    volumes: 
-     - /app/node_modules
-     - .:/app
+- 
+version: '3'  
+services:  
+  web:   
+    build:   
+      context: .  
+      dockerfile: Dockerfile.dev  
+    ports:  
+     - "3000:3000"  
+    volumes:   
+     - /app/node_modules  
+     - .:/app  
+  
+- 
 
 Assim, basta rodar:
 
@@ -84,14 +87,17 @@ Uma segunda solução, para não precisar realizar os testes manualmente:
 
 Criar um segundo serviço para executar nossos testes dentro da 'dockercompose.yml'
 
-tests:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - /app/node_modules
-      - .:/app
-    command: ["npm", "run", "test"]
+- 
+tests:  
+    build:  
+      context: .  
+      dockerfile: Dockerfile.dev  
+    volumes:  
+      - /app/node_modules  
+      - .:/app  
+    command: ["npm", "run", "test"]  
+
+- 
 
 Para reconstruir: 
 
@@ -108,3 +114,31 @@ abrir um terceiro terminal:
 > ~$ docker exec -it 'container ID' sh
 
 A partir daí você conseguirá executar comando dentro desse contêiner em execução.
+
+# Aula 87 - 90
+
+Para criar uma compilação de múltiplas etapas dentro da 'dockerfile'
+
+- 
+
+FROM node:alpine  
+WORKDIR '/app'  
+COPY package.json .  
+RUN npm install  
+COPY . .  
+RUN npm run build  
+ 
+FROM nginx  
+COPY --from=0 /app/build /usr/share/nginx/html
+
+- 
+
+# Aula 91
+
+executar NginX
+
+> ~$ docker build .
+
+> ~$ docker run -p 8080:80 'image ID'
+
+agora é possivel acessar no navegador
