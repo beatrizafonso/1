@@ -62,9 +62,9 @@ Assim, basta rodar:
 
 # Aula 81
 
-> docker build -f Dockerfile.dev .
+> ~$ docker build -f Dockerfile.dev .
 
-> docker run -it 'image ID' npm run test
+> ~$ docker run -it 'image ID' npm run test
 
 # Aula 82
 
@@ -75,3 +75,36 @@ em um terminal:
 em outro terminal:
 
 > ~$ docker exec -it 'conteiner ID' npm run test
+
+Assim nós podemos manipular os testes feitos no nosso contêiner
+
+# Aula 83
+
+Uma segunda solução, para não precisar realizar os testes manualmente:
+
+Criar um segundo serviço para executar nossos testes dentro da 'dockercompose.yml'
+
+tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["npm", "run", "test"]
+
+Para reconstruir: 
+
+> ~$ docker-compose up --build
+
+# Aula 86
+
+Para conseguirmos executar comandos dentro do contêiner iremos abrir em um segundoterminal o seguinte comando (para descobri o ID basta colocar docker ps):
+
+> ~$ dokcer attach 'container ID'
+
+abrir um terceiro terminal:
+
+> ~$ docker exec -it 'container ID' sh
+
+A partir daí você conseguirá executar comando dentro desse contêiner em execução.
