@@ -36,15 +36,15 @@ Irá aparecer diretórios que estarão dentro do seu contêiner
 
 > docker run = docker create + docker start
 
-- 'docker run' mostrará todos os logs ou todas as infos que saem do contêiner
+- `docker run` mostrará todos os logs ou todas as infos que saem do contêiner
 
-- 'docker create' cria e imprime o ID do contêiner:
+- `docker create` cria e imprime o ID do contêiner:
 
 > ~$ docker create 'image name' 
 
 > ~$ docker start -a 'container id'
 
-_-a : fará com que o docker observe a saída do contẽiner e imprima no terminal_
+_`-a` : fará com que o docker observe a saída do contẽiner e imprima no terminal_
 
 # Aula 19
 
@@ -60,7 +60,7 @@ _logs: utilizado para examinar um contêiner e recuperar todas as informações 
 
 # Aula 21
 
-1. parar um cantêiner que está sendo executado:
+1. parar um contêiner que está sendo executado:
 
 > ~$ docker stop 'container id'
 
@@ -76,15 +76,15 @@ _kill: encerra imediatamente o contêiner sem fazer nenhum trabalho adicional (u
 
 > ~$ docker exec -it 'container id' 'command'
 
-_exec: executar um comando adicional dentro de um contêiner_
+_`exec`: executar um comando adicional dentro de um contêiner_
 
-_-it = '-i' + '-t' : permite digitar a entrada diretamente no contêiner_
+_`-it` = `-i` + `-t` : permite digitar a entrada diretamente no contêiner_
 
 # Aula 24
 
-_-i: garante que qualquer coisa quer vocẽ digite seja direcionado ao comando digitado_
+_`-i`: garante que qualquer coisa quer vocẽ digite seja direcionado ao comando digitado_
 
-_-t: garante que o comando apareça bem formatado_
+_`-t`: garante que o comando apareça bem formatado_
 
 # Aula 25 
 

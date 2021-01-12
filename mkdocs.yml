@@ -1,0 +1,39 @@
+site_name: Cursos-Wine
+nav:
+  - Home: index.md
+  - Sobre: about.md
+  - Criando o site: criando-o-site.md
+  - Linux - introdução: linux-introducao.md
+  - Linux - módulo 3: linux-modulo-3.md
+  - Linux - módulo 4: linux-modulo-4.md
+  - Docker - introdução: docker-introducao.md
+  - Docker - módulo 1: docker-modulo-1.md
+  - Docker - módulo 2: docker-modulo-2.md
+  - Docker - módulo 3: docker-modulo-3.md
+  - Docker - módulo 4: docker-modulo-4.md
+  - Docker - módulo 5: docker-modulo-5.md
+  - Docker - módulo 6: docker-modulo-6.md
+theme:
+  name: material
+
+  palette:
+
+    # Toggle light mode
+    - scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+
+    # Toggle dark mode
+    - scheme: slate
+      primary: blue grey
+      accent: blue grey
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+  icon: 
+    repo: fontawesome/brands/github
+    repo_url: https://github.com/beatrizafonso/cursos-wine
+    repo_name: beatrizafonso/cursos-wine

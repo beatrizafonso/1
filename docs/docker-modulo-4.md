@@ -27,7 +27,7 @@ Para resolvê-lo irá adicionar a seguinte instrução na 'dockerfile':
 > COPY ./ ./  
 _É utilizada para mover arquivos e pastas do nosso sitema de arquivos local para o sistema de arquivos dentro do contêiner (criado temporariamente durante o processo de construção da pasta)_
 
-Depois disso, a imagem é criado porém não conseguimos acessá-la no navegador: http://localhost:8080/
+Depois disso, a imagem é criada porém não conseguimos acessá-la no navegador: http://localhost:8080/
 
 # Aula 47
 
@@ -41,14 +41,14 @@ _Encaminhar solicitações 8080 de entrada do host local para 8080 dentro do con
 
 # Aula 48
 
-Não é uma boa prática copiar tudo que está no seu sistema d arquivos local para o sistema de arquivos do contêiner temporário, já que alguma pasta pode conflitar.  
+Não é uma boa prática copiar tudo que está no seu sistema de arquivos local para o sistema de arquivos do contêiner temporário, já que alguma pasta pode conflitar.  
 Para isso adicionar após FROM: 
 
 > WORKDIR /usr/app
 
 # Aula 49 - 50
 
-Quando fizer uma alteração no código fonte do seu projeto, para não baixar todas as dependências novamente no processo de contrução 'build':
+Quando fizer uma alteração no código fonte do seu projeto, para não baixar todas as dependências novamente no processo de contrução `build`:
 
 para isso especificar na etapa incial de COPY a única coisa que quer copiar (arquivo não modificado)
 

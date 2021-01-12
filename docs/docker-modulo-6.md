@@ -36,9 +36,9 @@ Para as mudanças feitas no código atualizarem automaticamente:
 
 Comandos adicionais
 
-- _-v$(pwd):/app : para obter o diretório de trabalho atual ou o caminho para ele, pegar tudo que está dentro da pasta e mapear para a pasta do aplicativo em execução_
+- _`-v$(pwd):/app` : para obter o diretório de trabalho atual ou o caminho para ele, pegar tudo que está dentro da pasta e mapear para a pasta do aplicativo em execução_
 
-- _-v /app/node_modules : como apagamos a pasta 'node_modules' é necessário colocar esse comando_
+- _`-v /app/node_modules` : como apagamos a pasta 'node_modules' é necessário colocar esse comando_
 
 # Aula 77 - 78 
 

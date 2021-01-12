@@ -6,8 +6,9 @@
 
 Para mostrar todos os diretórios e arquivos que estão começando com '/' :
 
-> cd /
-> ls -l
+> ~$ cd /
+
+> ~$ ls -l
 
 # Aula 39
 
@@ -44,14 +45,14 @@ _cd / : voltar ao direorio principal_
 
 > ~$ ls -l
 
-- drwxr-xr-x   2 root root       4096 dez 31 10:56 bin
+- `drwxr-xr-x   2 root root       4096 dez 31 10:56 bin`
 
  tipo de arquivo - quantidade de links - proprietário - grupo - tamanho - mês - dia - horário - nome
 
-primeira coluna - quando começa com:
-- 'd' : diretório
-- 'l' : link 
-- '-' : arquivo
+primeira coluna - quando começa com:  
+- `d` : diretório  
+- `l` : link  
+- `-` : arquivo  
 
 # Aula 43
 
@@ -63,7 +64,7 @@ primeira coluna - quando começa com:
 
 > ~$ vi 'arquivo' : cria um arquivo e abre um editor
 
-_'shift + Q' + digitar 'wq!' + enter : para sair do editor_
+_`shift + Q` + digitar `wq!` + enter : para sair do editor_
 
 2. Criando diretórios:
 
@@ -79,7 +80,7 @@ _'shift + Q' + digitar 'wq!' + enter : para sair do editor_
 
 > ~$ locate 'arquivo/diretório'
 
-- obs: o 'locate' é mais rápido que o 'find', porém precisa atualizar sempre que criar um novo arquivo ou diretório:
+- obs: o `locate` é mais rápido que o `find`, porém precisa atualizar sempre que criar um novo arquivo ou diretório:
 
 > ~$ sudo updatedb
 
@@ -89,9 +90,9 @@ _'shift + Q' + digitar 'wq!' + enter : para sair do editor_
 
 # Aula 46
 
-- diferença entre 'find' e 'locate':
+- diferença entre `find` e `locate`:
 
-_'locate' tem um banco de dados (e precisa ser atualizado regularmente), já 'find' procura o arquivo dentro do sistema._
+_`locate` tem um banco de dados (e precisa ser atualizado regularmente), já `find` procura o arquivo dentro do sistema._
 
 # Aula 47 
 
@@ -105,19 +106,23 @@ _'locate' tem um banco de dados (e precisa ser atualizado regularmente), já 'fi
 
 _Um curinga é um caractere que pode ser usado como substituto para qualquer classe de caracteres em uma pesquisa_
 
-1. '*' : representa o zero ou mais caracteres
+1. `*` : representa o zero ou mais caracteres
 
-2. ? : representa um único caractere
+2. `?` : representa um único caractere
 
-3. {} : representa um intervalo de caracteres 
+3. `{}` : representa um intervalo de caracteres 
 
-> ~$ touch diretório{1..9} : irá criar 9 diretórios (diretório1, diretório2... diretório9)
+> ~$ touch diretório{1..9} :  
+_irá criar 9 diretórios (diretório1, diretório2... diretório9)_
 
-> ~$ ls -l diretório* : irá imprimir todos os diretórios que começam com 'diretório'
+> ~$ ls -l diretório* :  
+_irá imprimir todos os diretórios que começam com 'diretório'_
 
-> ~$ ls -l ?asta* : irá imprimir todos os arquivos, independente do primeiro caractere, que tenha 'asta' e qualquer coisa depois
+> ~$ ls -l ?asta* :  
+_irá imprimir todos os arquivos, independente do primeiro caractere, que tenha 'asta' e qualquer coisa depois_
 
-> ~$ ls -l * [cd] * : imprime qualquer diretório que tenh 'cd' no meio 
+> ~$ ls -l * [cd] * :  
+_imprime qualquer diretório que tenha 'cd' no meio_ 
 
 # Aula 49 
 

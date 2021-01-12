@@ -12,7 +12,7 @@
 
 3. iniciar o editor de código dentro dessa pasta
 
-> code .
+> ~$ code .
 
 4. criar uma pasta (Dockerfile) sem extensão no seu editor de texto e começar a criar a imagem
 
@@ -20,11 +20,11 @@ Dentro da pasta:
 
 1. Usar uma imagem existente como base (utilizar uma imagem de acordo com as suas nessecidades, 'alpine' tem as configurações desejadas para o que queremos executar) 
 
-> from 'nome da imagem' (from alpine)
+> FROM 'nome da imagem' (from alpine)
 
 2. baixar e instalar uma dependencia (rodar um comando que existe dentro da imagem) 
 
-> run apk add --update redis 
+> RUN apk add --update redis 
 
 3. falar à imagem o que fazer quando inicializar o contêiner 
 
@@ -36,11 +36,12 @@ Dentro da pasta:
 
 > ~$ docker run 'id criado' 
 
-_obs: se precisar apagar a imagem que foi criada rodar '~$ docker system prune'_
+_obs: se precisar apagar a imagem que foi criada rodar  
+`~$ docker system prune`_
 
 # Aula 33
 
-usamos o 'build' para obter um arquivo do docker e gerar uma imagem a partir dele; o '.' está especificando o que deve ser construido
+usamos o `build` para obter um arquivo do docker e gerar uma imagem a partir dele; o `.` está especificando o que deve ser construido
 
 # Aula 35
 
@@ -70,10 +71,11 @@ Gerar uma imagem manualmente:
 
 > ~$ docker ps (para ver os contêiners que estão rodando)
 
-> docker commit -c 'CMD ["redis-server"]' 'container id' (o ID do contêiner irá estar impresso depois do 'docker ps')
+> ~$ docker commit -c 'CMD ["redis-server"]' 'container id'  
+_(o ID do contêiner irá estar impresso depois do 'docker ps')_
 
 Depois disso irá aparece o id da imagem.
 
-> docker run 'id da imagem' 
+> ~$ docker run 'id da imagem' 
 
 _obs: ninguém cria uma imagem manualmente, é muito mais facil com um arquivo do docker 'dockerfile'_
