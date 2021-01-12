@@ -25,7 +25,7 @@ Com a pasta da maneira que está escrita [neste site](https://squidfunk.github.i
 - Depois de dar o push para o github, ativamos no github pages nas configurações e o site foi criado!
 
 
-## Configurações do site 
+# Configurações do site 
 
 Dentro da pasta `mkdocs.yml` são feitas todas as alterações do site: adicionados tópicos; mudança de cores; etc
 
