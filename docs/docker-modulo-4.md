@@ -1,4 +1,4 @@
-# Aula 39
+## Aula 39
 
 passos para criar um projeto:  
 1. criar um app em node.js  
@@ -7,7 +7,7 @@ passos para criar um projeto:
 4. executar a imagem como um contêiner  
 5. conectar o app com o navegador  
 
-# Aula 41 - 44
+## Aula 41 - 44
 
 Há um erro comum na nova versão do Node, e pode aparecer a seguinnte mensagem quando construimos 'build' nossa 'dockerfile'
 
@@ -18,7 +18,7 @@ Para resolver esse problema:
 1. Encontrar uma nova imagem de base no site: https://hub.docker.com/search?q=&type=image
 
 
-# Aula 45 
+## Aula 45 
 
 Depois de construir (docker build .) a 'dockerfile' corrigindo os erros acima, irá aparece um novo erro.  
 
@@ -29,7 +29,7 @@ _É utilizada para mover arquivos e pastas do nosso sitema de arquivos local par
 
 Depois disso, a imagem é criada porém não conseguimos acessá-la no navegador: http://localhost:8080/
 
-# Aula 47
+## Aula 47
 
 para conseguir acessar pelo navegador:
 
@@ -39,14 +39,14 @@ _obs: '8080' foi especificado dentro da pasta com o código_
 O que significa 8080:808O?  
 _Encaminhar solicitações 8080 de entrada do host local para 8080 dentro do contêiner (as solicitações sem sempre são inguais)_
 
-# Aula 48
+## Aula 48
 
 Não é uma boa prática copiar tudo que está no seu sistema de arquivos local para o sistema de arquivos do contêiner temporário, já que alguma pasta pode conflitar.  
 Para isso adicionar após FROM: 
 
 > WORKDIR /usr/app
 
-# Aula 49 - 50
+## Aula 49 - 50
 
 Quando fizer uma alteração no código fonte do seu projeto, para não baixar todas as dependências novamente no processo de contrução `build`:
 

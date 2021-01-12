@@ -1,4 +1,4 @@
-# Aula 67
+## Aula 67
 
 - instalar a ferramenta para o 'react project'
 
@@ -6,7 +6,7 @@
 
 > create-react-app 'nome do projeto'
 
-# Aula 68
+## Aula 68
 
 comandos para interagir com o projeto:
 
@@ -14,7 +14,7 @@ comandos para interagir com o projeto:
 > ~$ npm run test  
 > ~$ npm run build  
 
-# Aula 70
+## Aula 70
 
 - para especificar o arquivo que será usado para criar a imagem:
 
@@ -22,13 +22,13 @@ comandos para interagir com o projeto:
 
 Depois desse processo, já foi instalada todas as dependencia no diretório do porjeto, então para tornar o processo mais rápido, podemos apagar a pasta 'node_modules'.
 
-# Aula 71 
+## Aula 71 
 
 Para rodar o contêiner 
 
 > ~$ docker run -it -p 3000:3000 CONTAINER_ID
 
-# Aula 73 - 75
+## Aula 73 - 75
 
 Para as mudanças feitas no código atualizarem automaticamente:
 
@@ -40,7 +40,7 @@ Comandos adicionais
 
 - _`-v /app/node_modules` : como apagamos a pasta 'node_modules' é necessário colocar esse comando_
 
-# Aula 77 - 78 
+## Aula 77 - 78 
 
 Para facilitar o código acima vamos usar dockercompse.yml
 
@@ -63,13 +63,13 @@ Assim, basta rodar:
 
 > ~$ docker-compose up
 
-# Aula 81
+## Aula 81
 
 > ~$ docker build -f Dockerfile.dev .
 
 > ~$ docker run -it 'image ID' npm run test
 
-# Aula 82
+## Aula 82
 
 em um terminal:
 
@@ -81,7 +81,7 @@ em outro terminal:
 
 Assim nós podemos manipular os testes feitos no nosso contêiner
 
-# Aula 83
+## Aula 83
 
 Uma segunda solução, para não precisar realizar os testes manualmente:
 
@@ -103,7 +103,7 @@ Para reconstruir:
 
 > ~$ docker-compose up --build
 
-# Aula 86
+## Aula 86
 
 Para conseguirmos executar comandos dentro do contêiner iremos abrir em um segundoterminal o seguinte comando (para descobri o ID basta colocar docker ps):
 
@@ -115,7 +115,7 @@ abrir um terceiro terminal:
 
 A partir daí você conseguirá executar comando dentro desse contêiner em execução.
 
-# Aula 87 - 90
+## Aula 87 - 90
 
 Para criar uma compilação de múltiplas etapas dentro da 'dockerfile'
 
@@ -133,7 +133,7 @@ COPY --from=0 /app/build /usr/share/nginx/html
 
 - 
 
-# Aula 91
+## Aula 91
 
 executar NginX
 

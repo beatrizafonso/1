@@ -1,8 +1,8 @@
-# Aula 32
+## Aula 32
 - abrir o terminal: ctrl + alt + T
 - prompt travado,  para recuperar: ctrl + C
 
-# Aula 38
+## Aula 38
 
 Para mostrar todos os diretórios e arquivos que estão começando com '/' :
 
@@ -10,7 +10,7 @@ Para mostrar todos os diretórios e arquivos que estão começando com '/' :
 
 > ~$ ls -l
 
-# Aula 39
+## Aula 39
 
 diretórios importantes
 1. /boot : contém os arquivos usados para o gerenciador de inicialização;
@@ -18,7 +18,7 @@ diretórios importantes
 3. /dev : contém os os dispositivos do sitema.. drives, disco etc
 4. /etc : contém toda a configuração dos arquivos/aplicativos... é possivel modificar os arquivos (emails,etc) com /etc
 
-# Aula 40
+## Aula 40
 
 - Quais os comandos para ir de um diretório a outra.
 
@@ -35,13 +35,13 @@ _cd boot : encaminha para o diretório 'boot'_
 
 _cd / : voltar ao direorio principal_
 
-# Aula 41
+## Aula 41
 
 - Existem dois caminhos de navegar em um sistema de arquivos:
 1. Absolute path: sempre começa com '/' (cd/var/log/samba)
 2. relative path: identifica um local em relação a sua posição atual (cd /var -> cd log -> cd samba)
 
-# Aula 42
+## Aula 42
 
 > ~$ ls -l
 
@@ -54,7 +54,7 @@ primeira coluna - quando começa com:
 - `l` : link  
 - `-` : arquivo  
 
-# Aula 43
+## Aula 43
 
 1. Criando diretórios:
 
@@ -70,7 +70,7 @@ _`shift + Q` + digitar `wq!` + enter : para sair do editor_
 
 > ~$ mkdir 'diretório'
 
-# Aula 45
+## Aula 45
 
 - comandos para encontrar arquivos e diretórios
 
@@ -88,19 +88,19 @@ _`shift + Q` + digitar `wq!` + enter : para sair do editor_
 
 > ~$ su -
 
-# Aula 46
+## Aula 46
 
 - diferença entre `find` e `locate`:
 
 _`locate` tem um banco de dados (e precisa ser atualizado regularmente), já `find` procura o arquivo dentro do sistema._
 
-# Aula 47 
+## Aula 47 
 
 - Alterando a senha
 
 > ~$ passwd 'userid'
 
-# Aula 48
+## Aula 48
 
 - Curingas
 
@@ -124,7 +124,7 @@ _irá imprimir todos os arquivos, independente do primeiro caractere, que tenha 
 > ~$ ls -l * [cd] * :  
 _imprime qualquer diretório que tenha 'cd' no meio_ 
 
-# Aula 49 
+## Aula 49 
 
 _inode: ponto ou número de um arquivo no 'hard disk'_ 
 

@@ -1,11 +1,11 @@
-# Aula 14
+## Aula 14
 
 1. Criar e executar um contêiner usando uma imagem:
 
 > ~$ docker run 'image name'
 - exemplo: docker run hello-world
 
-# Aula 15
+## Aula 15
 
 1. Executar dentro do contêiner depois que ele for inicializado 
 (qualquer comando padrão incluído na imagem não será executado)
@@ -20,7 +20,7 @@ _ls: irá aparecer todos os arquivos e diretórios dentro de um determinado dire
 
 Irá aparecer diretórios que estarão dentro do seu contêiner
 
-# Aula 16
+## Aula 16
 
 1. Listar todos os diferentes contêiners em execução:
 
@@ -30,7 +30,7 @@ Irá aparecer diretórios que estarão dentro do seu contêiner
 
 > ~$ docker ps --all
 
-# Aula 17 
+## Aula 17 
 
 1. O que acontece quando um contêiner é criado?
 
@@ -46,19 +46,19 @@ Irá aparecer diretórios que estarão dentro do seu contêiner
 
 _`-a` : fará com que o docker observe a saída do contẽiner e imprima no terminal_
 
-# Aula 19
+## Aula 19
 
 1. Remover todos os contêiners:
 
 > ~$ docker system prune
 
-# Aula 20
+## Aula 20
 
 > ~$ docker logs 'container id'
 
 _logs: utilizado para examinar um contêiner e recuperar todas as informações que foram emitidas a partir dele_
 
-# Aula 21
+## Aula 21
 
 1. parar um contêiner que está sendo executado:
 
@@ -70,7 +70,7 @@ _stop: dá um tempo para o contêiner encerrar e fazer uma limpeza (ideal)_
 
 _kill: encerra imediatamente o contêiner sem fazer nenhum trabalho adicional (utilizar quando o 'stop' não funcionar)_
 
-# Aula 23
+## Aula 23
 
 1. Como executar comandos dentro de um contêiner em execução?
 
@@ -80,13 +80,13 @@ _`exec`: executar um comando adicional dentro de um contêiner_
 
 _`-it` = `-i` + `-t` : permite digitar a entrada diretamente no contêiner_
 
-# Aula 24
+## Aula 24
 
 _`-i`: garante que qualquer coisa quer vocẽ digite seja direcionado ao comando digitado_
 
 _`-t`: garante que o comando apareça bem formatado_
 
-# Aula 25 
+## Aula 25 
 
 1. Como abrir um prompt de comando dentro de um contêiner (para não precisar digitar 'docker exec' seguidamente)
 
@@ -98,12 +98,12 @@ _sh: é um programa que nos permite digitar comando e executá-los dentro de uma
 
 Para sair do prompt de comando: 'ctrl + D' ou 'exit'
 
-# Aula 26 
+## Aula 26 
 
 1. Executar e abrir o prompt de comando dentro do contêiner:
 S
 > ~$ docker run -it 'image name' sh 
 
-# Aula 27 
+## Aula 27 
 
 Tomar cuidado ao abrir o prompt de comando de um cantêiner específico em dois terminais, as mudanças que serão feitas em um não parecerá no outro.

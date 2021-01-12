@@ -1,4 +1,4 @@
-# Aula 30
+## Aula 30
 
 - criando imagens no docker 
 
@@ -39,15 +39,15 @@ Dentro da pasta:
 _obs: se precisar apagar a imagem que foi criada rodar  
 `~$ docker system prune`_
 
-# Aula 33
+## Aula 33
 
 usamos o `build` para obter um arquivo do docker e gerar uma imagem a partir dele; o `.` está especificando o que deve ser construido
 
-# Aula 35
+## Aula 35
 
 Ao reconstruir uma imagem (caso tenha colocado um comando adicional) tentar colocar sempre em ordem, para que não tenha que instalar tudo de novo. 
 
-# Aula 36
+## Aula 36
 
 Para colocar uma tag em uma imagem e não precisar colocar o ID sempre que quiser rodar ela:
 
@@ -58,7 +58,7 @@ Depois disso, para rodar a imagem basta:
 
 > ~$ docker run 'docker ID'/'nome do projeto'
 
-# Aula 38 
+## Aula 38 
 
 Gerar uma imagem manualmente:
 

@@ -20,7 +20,7 @@ theme:
 5. Para hospedar o site no GitHub pages:
 
 - Primeiro foi necessária a criação do GitHub Actions workflow dentro do repositório: `.github/workflows/ci.yml`  
-Com a pasta da maneira que está escrita [neste site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/)
+Com a pasta da maneira que está escrita [neste site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/).
 
 - Depois de dar o push para o github, ativamos no github pages nas configurações e o site foi criado!
 

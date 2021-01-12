@@ -1,4 +1,4 @@
-# Aula 53
+## Aula 53
 
 Remover um diretório:
 
@@ -8,7 +8,7 @@ Para saber todas as opções que estão disponíveis dentro de um comando:
 
 > ~$ man 'comando'
 
-# Aula 54
+## Aula 54
 
 - Alterar as permissões de seus arquivos e diretórios
 
@@ -42,7 +42,7 @@ Retirar a permissão de todos para entrar em um diretório:
 
 _para dar a permissão de volta basta trocar `-` por `+`_
 
-# Aula 55 
+## Aula 55 
 
 permissões de arquivos/diretórios usando o método numérico
 
@@ -66,7 +66,7 @@ terceiro dígito: outros
 > ~$ chmod 764 'arquivo'  
 _significado: usuário pode ler, escrever e executar; grupo pode ler e escreve; outros podem apenas ler_
 
-# Aula 56 
+## Aula 56 
 
 - comandos para mudar o proprietário de um arquivo:
 
@@ -83,7 +83,7 @@ mudar o grupo:
 
 _obs: antes de mudar o proprietário/grupo é necessário obter autorização do su, colocando o comando `su -` e rodando antes, ou colocando `sudo` antes do comando_
 
-# Aula 57 
+## Aula 57 
 
 - **Lista de controle de acessos** : é possível dar permissão a um usuário particular para ler um arquivo, sem precisar permitir para todos os outros.
 
@@ -118,7 +118,7 @@ remover todas as permissões a todos
 
 > ~$ setfacl -b /caminho/para/arquivo
 
-# Aula 58 
+## Aula 58 
 
 Comandos de ajuda:
 
@@ -126,4 +126,4 @@ Comandos de ajuda:
 > ~$ 'comando' --help : mais detalhes sobre o comando  
 > ~$ man 'comando' : manual do comando, imprime uma lista de comandos que podem ser utilizados  
 
-# Aula 59
+## Aula 59

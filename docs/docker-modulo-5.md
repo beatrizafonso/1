@@ -1,4 +1,4 @@
-# Aula 53
+## Aula 53
 
 Para imprimir a quantidade de visitas, foi feito o codio em node.js e a 'dockerfile' ficou da seguinte maneira que já foi ensinado antes:
 
@@ -16,7 +16,7 @@ Depois vamos contruir a imagem com uma tag
 
 > ~$ docker build -t beatriz/visits .
 
-# Aula 54
+## Aula 54
 
 Para o aplicativo rodar é necessário registrar um segundo contêiner para executar o servidor (redis utilizado no exemplo)
 
@@ -25,7 +25,7 @@ Para o aplicativo rodar é necessário registrar um segundo contêiner para exec
 - vamos utilizar docker compose  
 _funciona da mesma maneira que docker CLI, mas permite que vc emite vários comandos mais rapidamente._
 
-# Aula 55
+## Aula 55
 
 Para utilizar o docker compose, vamos executar os mesmos comandos de antes, porém vamos coduficá-los  em um arquivo do diretório do projeto (`docker-compose.yml`).
 
@@ -40,7 +40,7 @@ services:
     ports:
       - '4001:8081'`
 
-# Aula 56
+## Aula 56
 
 Para conectar essa nova pasta ao código fonte deverá ser colocar dentro da pasta index.js (no local que está especificando o redis):
 
@@ -49,7 +49,7 @@ Para conectar essa nova pasta ao código fonte deverá ser colocar dentro da pas
   port: 6379  
 }
 
-# Aula 57
+## Aula 57
 
 para criar nossa imagem:
 
@@ -66,7 +66,7 @@ para reconstruir a imagem
 
 > ~$ docker run 'imagem'
 
-# Aula 58 
+## Aula 58 
 
 Iniciar um grupo de contêiners em segundo plano:
 
@@ -76,7 +76,7 @@ Parar contêiners
 
 > ~$ docker-compose down
 
-# Aula 59 
+## Aula 59 
 
 Para evitar que o cntêiner trave, é possivel adicionar os seguintes codigos dentro do codigo fonte da pasta index.js:
 Assim o servidor sairá automaticamente sempre que algo de errado ocorrer.
@@ -85,7 +85,7 @@ const process = require('process');
 e  
 process.exit(0);
 
-# Aula 60 
+## Aula 60 
 
 Para o contêiner reiniciar automaticamente:
 
@@ -105,7 +105,7 @@ _- `always` : sempre reiniciar_
 _- `on-failure`: apenas reinicia se o contêiner para com um código de erro_  
 _- `unless-stopped`: sempre reiniciar a não ser que alguém o force a parar_  
 
-# Aula 61 
+## Aula 61 
 
 - status dos contêiners que estão em execução dentro do docker:
 
