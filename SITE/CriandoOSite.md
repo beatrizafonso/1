@@ -12,3 +12,7 @@ _será criada uma pasta docs (com o arquivo index.md) e um arquivo mkdocs.yml_
 
 theme:
   name: material
+
+4. Para ver as alterações em tempo real:
+
+> ~$ docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
