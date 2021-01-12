@@ -1,6 +1,6 @@
 # Bem vindo ao meu site! 
 
-Os tópidos apresentados são:
+Os tópicos apresentados são:
 
 1. Como foi feita a construção do site?
 
