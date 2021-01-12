@@ -33,7 +33,7 @@ Depois disso, a imagem é criada porém não conseguimos acessá-la no navegador
 
 para conseguir acessar pelo navegador:
 
-> ~$ docker run -p 8080:8080 'imageID'  
+> `~$ docker run -p 8080:8080 'imageID'`  
 _obs: '8080' foi especificado dentro da pasta com o código_
 
 O que significa 8080:808O?  

@@ -6,34 +6,34 @@
 
 Para mostrar todos os diretórios e arquivos que estão começando com '/' :
 
-> ~$ cd /
+> `~$ cd /`
 
-> ~$ ls -l
+> `~$ ls -l`
 
 ## Aula 39
 
 diretórios importantes
-1. /boot : contém os arquivos usados para o gerenciador de inicialização;
-2. /root : diretório inicial do usuário;
-3. /dev : contém os os dispositivos do sitema.. drives, disco etc
-4. /etc : contém toda a configuração dos arquivos/aplicativos... é possivel modificar os arquivos (emails,etc) com /etc
+1. `/boot` : contém os arquivos usados para o gerenciador de inicialização;
+2. `/root` : diretório inicial do usuário;
+3. `/dev` : contém os os dispositivos do sitema.. drives, disco etc
+4. `/etc` : contém toda a configuração dos arquivos/aplicativos... é possivel modificar os arquivos (emails,etc) com /etc
 
 ## Aula 40
 
 - Quais os comandos para ir de um diretório a outra.
 
-1. mudança de diretório:
-> ~$ cd
-2. 'print working diretory': informa qual diretório você esta atualmente
-> ~$ pwd
-3. Lista o conteúdo de um diretório ou arquivo
-> ~$ ls -l
+**1.** mudança de diretório:
+> `~$ cd`
+**2.** 'print working diretory': informa qual diretório você esta atualmente
+> `~$ pwd`
+**3.** Lista o conteúdo de um diretório ou arquivo
+> `~$ ls -l`
 
-_cd .. : um diretório atrás_
+_`cd ..` : um diretório atrás_
 
-_cd boot : encaminha para o diretório 'boot'_
+_`cd boot` : encaminha para o diretório 'boot'_
 
-_cd / : voltar ao direorio principal_
+_`cd /` : voltar ao direorio principal_
 
 ## Aula 41
 
@@ -43,7 +43,7 @@ _cd / : voltar ao direorio principal_
 
 ## Aula 42
 
-> ~$ ls -l
+> `~$ ls -l`
 
 - `drwxr-xr-x   2 root root       4096 dez 31 10:56 bin`
 
@@ -56,37 +56,40 @@ primeira coluna - quando começa com:
 
 ## Aula 43
 
-1. Criando diretórios:
+**1.** Criando diretórios:
 
-> ~$ touch 'arquivo' : cria um arquivo vazio
+> `~$ touch 'arquivo' : cria um arquivo vazio`
 
-> ~$ cp 'arquivo' 'diretório de destinação' : copia um arquivo ja existente 
+> `~$ cp 'arquivo' 'diretório de destinação'`  
+_copia um arquivo ja existente_ 
 
-> ~$ vi 'arquivo' : cria um arquivo e abre um editor
+> `~$ vi 'arquivo'`  
+_cria um arquivo e abre um editor_
 
 _`shift + Q` + digitar `wq!` + enter : para sair do editor_
 
-2. Criando diretórios:
+**2.** Criando diretórios:
 
-> ~$ mkdir 'diretório'
+> `~$ mkdir 'diretório'`
 
 ## Aula 45
 
 - comandos para encontrar arquivos e diretórios
 
-> ~$ find . -name "'arquivo/diretório'"
+> `~$ find . -name "'arquivo/diretório'"`
 
-> ~$ find / -name "'arquivo'"  : quando não se sabe o diretório, esse comando procura em 'root'. (precisa da permissão do su)
+> `~$ find / -name "'arquivo'"`  
+_quando não se sabe o diretório, esse comando procura em 'root'. (precisa da permissão do su)_
 
-> ~$ locate 'arquivo/diretório'
+> _~$ locate 'arquivo/diretório'_
 
 - obs: o `locate` é mais rápido que o `find`, porém precisa atualizar sempre que criar um novo arquivo ou diretório:
 
-> ~$ sudo updatedb
+> `~$ sudo updatedb`
 
 - Quando a permissão for negada:
 
-> ~$ su -
+> `~$ su -`
 
 ## Aula 46
 
@@ -98,7 +101,7 @@ _`locate` tem um banco de dados (e precisa ser atualizado regularmente), já `fi
 
 - Alterando a senha
 
-> ~$ passwd 'userid'
+> `~$ passwd 'userid'`
 
 ## Aula 48
 
@@ -112,16 +115,16 @@ _Um curinga é um caractere que pode ser usado como substituto para qualquer cla
 
 3. `{}` : representa um intervalo de caracteres 
 
-> ~$ touch diretório{1..9} :  
+> `~$ touch diretório{1..9}`  
 _irá criar 9 diretórios (diretório1, diretório2... diretório9)_
 
-> ~$ ls -l diretório* :  
+> `~$ ls -l diretório*`    
 _irá imprimir todos os diretórios que começam com 'diretório'_
 
-> ~$ ls -l ?asta* :  
+> `~$ ls -l ?asta*`    
 _irá imprimir todos os arquivos, independente do primeiro caractere, que tenha 'asta' e qualquer coisa depois_
 
-> ~$ ls -l * [cd] * :  
+> `~$ ls -l * [cd] *`   
 _imprime qualquer diretório que tenha 'cd' no meio_ 
 
 ## Aula 49 
@@ -134,17 +137,17 @@ _hard link: deletando, renomeando ou movendo o arquivo original não vai afetar 
 
 - criar um hard link:
 
-> ~$ ln 'arquivo'
+> `~$ ln 'arquivo'`
 
 - criar um soft link:
 
-> ~$ ln -s 'arquivo'
+> `~$ ln -s 'arquivo'`
 
 - escrever dentro de um arquivo:
 
-> ~$ echo "'qualquer coisa aqui'" > 'arquivo'  
-> ~$ echo "'comentário adicional'" >> 'arquivo'
+> `~$ echo "'qualquer coisa aqui'" > 'arquivo'`  
+> `~$ echo "'comentário adicional'" >> 'arquivo'`
 
 - imprimir o que está escrito:
 
-> ~$ cat 'arquivo'
+> `~$ cat 'arquivo'`

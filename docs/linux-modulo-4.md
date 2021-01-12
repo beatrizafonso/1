@@ -2,11 +2,11 @@
 
 Remover um diretório:
 
-> ~$ rm -r 'diretorio'/
+> `~$ rm -r 'diretorio'/`
 
 Para saber todas as opções que estão disponíveis dentro de um comando:
 
-> ~$ man 'comando'
+> `~$ man 'comando'`
 
 ## Aula 54
 
@@ -23,22 +23,22 @@ Há 3 níveis de controle das permissões:
 3. `o` - other (todos no sistema)  
 
 - retirar permissão de um grupo para escrever (group - write)
-> ~$ chmod g-w 'arquivo'    
+> `~$ chmod g-w 'arquivo'`    
 
 - retirar permissão de um grupo para ler (group - read)
-> ~$ chmod g-r 'arquivo'  
+> `~$ chmod g-r 'arquivo'`  
 
 - retirar permissão do usuário para escrever (user - write)
-> ~$ chmod u-w 'arquivo'
+> `~$ chmod u-w 'arquivo'`
 
 - adicionar permissão ao usuário para ler e escrever no arquivo (user + ler e escrever)
-> ~$ chmod u+rw 'arquivo'
+> `~$ chmod u+rw 'arquivo'`
 
 _caso queira adicionar permissão para o grupo ou outros basta troca `u` por `g` ou `o`_
 
-Retirar a permissão de todos para entrar em um diretório:
+- Retirar a permissão de todos para entrar em um diretório:
 
-> ~$ chmod a-x 'diretório' 
+> `~$ chmod a-x 'diretório'` 
 
 _para dar a permissão de volta basta trocar `-` por `+`_
 
@@ -46,7 +46,7 @@ _para dar a permissão de volta basta trocar `-` por `+`_
 
 permissões de arquivos/diretórios usando o método numérico
 
-> ~$ chmod ugo+r 'arquivo' = ~$ chmod 444 'arquivo'
+> `~$ chmod ugo+r 'arquivo' = ~$ chmod 444 'arquivo'`
 
 significado dos números:  
 0 = sem permissão  
@@ -63,23 +63,23 @@ primeiro dígito: usuário
 segundo dígito: grupo  
 terceiro dígito: outros
 
-> ~$ chmod 764 'arquivo'  
+> `~$ chmod 764 'arquivo'`  
 _significado: usuário pode ler, escrever e executar; grupo pode ler e escreve; outros podem apenas ler_
 
 ## Aula 56 
 
 - comandos para mudar o proprietário de um arquivo:
 
-1. chown : muda o proprietário 
-2. chgrp : muda o grupo proprietário
+1. `chown` : muda o proprietário 
+2. `chgrp` : muda o grupo proprietário
 
 mudar o proprietário:
 
-> ~$ chown 'novo proprietário' 'arquivo'
+> `~$ chown 'novo proprietário' 'arquivo'`
 
 mudar o grupo:
 
-> ~$ chgrp 'novo grupo' 'arquivo'
+> `~$ chgrp 'novo grupo' 'arquivo'`
 
 _obs: antes de mudar o proprietário/grupo é necessário obter autorização do su, colocando o comando `su -` e rodando antes, ou colocando `sudo` antes do comando_
 
@@ -87,43 +87,46 @@ _obs: antes de mudar o proprietário/grupo é necessário obter autorização do
 
 - **Lista de controle de acessos** : é possível dar permissão a um usuário particular para ler um arquivo, sem precisar permitir para todos os outros.
 
-Comandos:
+**Comandos:**
 
-1. setfacl : define  a maneira que vc quer que seja a permissão
+1. `setfacl` : define  a maneira que vc quer que seja a permissão
 
-2. getfacl : da a informação sobre as permissões existente em um arquivo
+2. `getfacl` : da a informação sobre as permissões existente em um arquivo
 
-Para ver quem tem permissão 
+Para ver quem tem permissão:
 
-> ~$ getfacl 'arquivo'
+> `~$ getfacl 'arquivo'`
 
-Adicionar permissão ao usuário
+Adicionar permissão ao usuário:
 
-> ~$ setfacl -m u:'user':rwx /caminho/para/arquivo  
+> `~$ setfacl -m u:'user':rwx /caminho/para/arquivo`   
 _`-m` : para modificar a permissão_
 
 Adicionar permissão ao grupo 
 
-> ~$ setfacl -m g:'grupo':rw /caminho/para/arquivo
+> `~$ setfacl -m g:'grupo':rw /caminho/para/arquivo`
 
 Para permitir que todos os arquivos/diretórios herdem entradas do ACL do diretório em que estão 
 
-> ~$ setfacl -rm "entry" /caminho/para/diretório
+> `~$ setfacl -rm "entry" /caminho/para/diretório`
 
 Para remover uma entrada específica para um usuário específico
 
-> ~$ setfacl -x u:'user' /caminho/para/arquivo
+> `~$ setfacl -x u:'user' /caminho/para/arquivo`
 
 remover todas as permissões a todos 
 
-> ~$ setfacl -b /caminho/para/arquivo
+> `~$ setfacl -b /caminho/para/arquivo`
 
 ## Aula 58 
 
 Comandos de ajuda:
 
-> ~$ whatis 'comando' : informações sobre o comando  
-> ~$ 'comando' --help : mais detalhes sobre o comando  
-> ~$ man 'comando' : manual do comando, imprime uma lista de comandos que podem ser utilizados  
+> `~$ whatis 'comando'`  
+_informações sobre o comando_  
+> `~$ 'comando' --help`  
+_mais detalhes sobre o comando_  
+> `~$ man 'comando'`  
+_manual do comando, imprime uma lista de comandos que podem ser utilizados_  
 
 ## Aula 59
