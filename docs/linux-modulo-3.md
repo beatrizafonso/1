@@ -22,12 +22,14 @@ diretórios importantes
 
 - Quais os comandos para ir de um diretório a outra.
 
-**1.** mudança de diretório:
-> `~$ cd`
-**2.** 'print working diretory': informa qual diretório você esta atualmente
-> `~$ pwd`
-**3.** Lista o conteúdo de um diretório ou arquivo
-> `~$ ls -l`
+**1.** mudança de diretório:  
+> `~$ cd`  
+
+**2.** 'print working diretory': informa qual diretório você esta atualmente  
+> `~$ pwd`  
+
+**3.** Lista o conteúdo de um diretório ou arquivo  
+> `~$ ls -l`  
 
 _`cd ..` : um diretório atrás_
 
@@ -37,9 +39,9 @@ _`cd /` : voltar ao direorio principal_
 
 ## Aula 41
 
-- Existem dois caminhos de navegar em um sistema de arquivos:
-1. Absolute path: sempre começa com '/' (cd/var/log/samba)
-2. relative path: identifica um local em relação a sua posição atual (cd /var -> cd log -> cd samba)
+- Existem dois caminhos de navegar em um sistema de arquivos:  
+**1.** Absolute path: sempre começa com '/' (cd/var/log/samba)  
+**2.** relative path: identifica um local em relação a sua posição atual (cd /var -> cd log -> cd samba)
 
 ## Aula 42
 
@@ -58,7 +60,8 @@ primeira coluna - quando começa com:
 
 **1.** Criando diretórios:
 
-> `~$ touch 'arquivo' : cria um arquivo vazio`
+> `~$ touch 'arquivo'`
+_cria um arquivo vazio_
 
 > `~$ cp 'arquivo' 'diretório de destinação'`  
 _copia um arquivo ja existente_ 
