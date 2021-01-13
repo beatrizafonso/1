@@ -1,6 +1,10 @@
+# Módulo 3
+
 ## Aula 32
-- abrir o terminal: ctrl + alt + T
-- prompt travado,  para recuperar: ctrl + C
+### Abrir o terminal
+ctrl + alt + T
+### Prompt travado
+Para recuperar: ctrl + C
 
 ## Aula 38
 
@@ -12,7 +16,7 @@ Para mostrar todos os diretórios e arquivos que estão começando com '/' :
 
 ## Aula 39
 
-diretórios importantes
+### Diretórios importantes
 1. `/boot` : contém os arquivos usados para o gerenciador de inicialização;
 2. `/root` : diretório inicial do usuário;
 3. `/dev` : contém os os dispositivos do sitema.. drives, disco etc
@@ -45,6 +49,8 @@ _`cd /` : voltar ao direorio principal_
 
 ## Aula 42
 
+### tipos de arquivo
+
 > `~$ ls -l`
 
 - `drwxr-xr-x   2 root root       4096 dez 31 10:56 bin`
@@ -58,7 +64,7 @@ primeira coluna - quando começa com:
 
 ## Aula 43
 
-**1.** Criando diretórios:
+### Criando arquivos
 
 > `~$ touch 'arquivo'`
 _cria um arquivo vazio_
@@ -71,13 +77,13 @@ _cria um arquivo e abre um editor_
 
 _`shift + Q` + digitar `wq!` + enter : para sair do editor_
 
-**2.** Criando diretórios:
+### Criando diretórios
 
 > `~$ mkdir 'diretório'`
 
 ## Aula 45
 
-- comandos para encontrar arquivos e diretórios
+### Comandos para encontrar arquivos e diretórios
 
 > `~$ find . -name "'arquivo/diretório'"`
 
@@ -102,13 +108,13 @@ _`locate` tem um banco de dados (e precisa ser atualizado regularmente), já `fi
 
 ## Aula 47 
 
-- Alterando a senha
+### Alterando a senha
 
 > `~$ passwd 'userid'`
 
 ## Aula 48
 
-- Curingas
+### Curingas
 
 _Um curinga é um caractere que pode ser usado como substituto para qualquer classe de caracteres em uma pesquisa_
 
@@ -132,6 +138,7 @@ _imprime qualquer diretório que tenha 'cd' no meio_
 
 ## Aula 49 
 
+### Soft e Hard Link
 _inode: ponto ou número de um arquivo no 'hard disk'_ 
 
 _soft link: link que vai ser removido se um arquivo for removido ou renomeado_

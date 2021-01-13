@@ -1,4 +1,8 @@
+# Módulo 6
+
 ## Aula 67
+
+### React project
 
 - instalar a ferramenta para o 'react project'
 
@@ -8,6 +12,8 @@
 
 ## Aula 68
 
+### Interagindo com o projeto
+
 comandos para interagir com o projeto:
 
 > `~$ npm run start`  
@@ -16,21 +22,23 @@ comandos para interagir com o projeto:
 
 ## Aula 70
 
+### [Dockerfile.dev]
+
 - para especificar o arquivo que será usado para criar a imagem:
 
 > `~$ docker build -f Dockerfile.dev .`
 
-Depois desse processo, já foi instalada todas as dependencia no diretório do porjeto, então para tornar o processo mais rápido, podemos apagar a pasta 'node_modules'.
+Depois desse processo, já foi instalada todas as dependencia no diretório do projeto, então para tornar o processo mais rápido, podemos apagar a pasta 'node_modules'.
 
 ## Aula 71 
 
-Para rodar o contêiner:
+### Rodar o contêiner
 
 > `~$ docker run -it -p 3000:3000 CONTAINER_ID`
 
 ## Aula 73 - 75
 
-Para as mudanças feitas no código atualizarem automaticamente:
+### Atualizando mudanças no código automaticamente
 
 > `~$ docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app 'image ID'`
 
@@ -42,7 +50,9 @@ Comandos adicionais:
 
 ## Aula 77 - 78 
 
-Para facilitar o código acima vamos usar dockercompse.yml
+### [Dockercompose.yml]
+
+Para facilitar o código acima vamos usar dockercompose.yml
 
 `version: '3'  
 services:  
@@ -69,6 +79,8 @@ Assim, basta rodar:
 
 ## Aula 82
 
+### Manipualndo testes no contêiner
+
 em um terminal:
 
 > `~$ docker-compose up` 
@@ -80,6 +92,8 @@ em outro terminal:
 Assim nós podemos manipular os testes feitos no nosso contêiner
 
 ## Aula 83
+
+### Testes automáticos
 
 Uma segunda solução, para não precisar realizar os testes manualmente:
 
@@ -100,7 +114,9 @@ Para reconstruir:
 
 ## Aula 86
 
-Para conseguirmos executar comandos dentro do contêiner iremos abrir em um segundoterminal o seguinte comando (para descobri o ID basta colocar docker ps):
+### Comandos dentro do contêiner
+
+Para conseguirmos executar comandos dentro do contêiner iremos abrir em um segundo terminal o seguinte comando (para descobri o ID basta colocar docker ps):
 
 > `~$ dokcer attach 'container ID'`
 

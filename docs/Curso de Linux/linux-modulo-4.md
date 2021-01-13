@@ -1,6 +1,8 @@
+# Módulo 4
+
 ## Aula 53
 
-Remover um diretório:
+### Remover um diretório:
 
 > `~$ rm -r 'diretorio'/`
 
@@ -9,6 +11,8 @@ Para saber todas as opções que estão disponíveis dentro de um comando:
 > `~$ man 'comando'`
 
 ## Aula 54
+
+### Permissões de arquivos e diretórios
 
 - Alterar as permissões de seus arquivos e diretórios
 
@@ -68,6 +72,8 @@ _significado: usuário pode ler, escrever e executar; grupo pode ler e escreve; 
 
 ## Aula 56 
 
+### Proprietário de um arquivo
+
 - comandos para mudar o proprietário de um arquivo:
 
 1. `chown` : muda o proprietário 
@@ -85,7 +91,9 @@ _obs: antes de mudar o proprietário/grupo é necessário obter autorização do
 
 ## Aula 57 
 
-- **Lista de controle de acessos** : é possível dar permissão a um usuário particular para ler um arquivo, sem precisar permitir para todos os outros.
+### Lista de controle de acessos
+
+É possível dar permissão a um usuário particular para ler um arquivo, sem precisar permitir para todos os outros.
 
 **Comandos:**
 
@@ -120,7 +128,7 @@ remover todas as permissões a todos
 
 ## Aula 58 
 
-Comandos de ajuda:
+### Comandos de ajuda
 
 > `~$ whatis 'comando'`  
 _informações sobre o comando_  

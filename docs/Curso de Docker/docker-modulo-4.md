@@ -1,6 +1,8 @@
+# Módulo 4
+
 ## Aula 39
 
-passos para criar um projeto:  
+### Passos para criar um projeto   
 1. criar um app em node.js  
 2. criar um 'dockerfile'  
 3. construir a imagem dentro do 'dockerfile'  
@@ -9,6 +11,7 @@ passos para criar um projeto:
 
 ## Aula 41 - 44
 
+### ERRO - npm: not found
 Há um erro comum na nova versão do Node, e pode aparecer a seguinnte mensagem quando construimos 'build' nossa 'dockerfile'
 
 _npm: not found_
@@ -19,6 +22,8 @@ Para resolver esse problema:
 
 
 ## Aula 45 
+
+### [dockerfile] - COPY
 
 Depois de construir (docker build .) a 'dockerfile' corrigindo os erros acima, irá aparece um novo erro.  
 
@@ -31,7 +36,7 @@ Depois disso, a imagem é criada porém não conseguimos acessá-la no navegador
 
 ## Aula 47
 
-para conseguir acessar pelo navegador:
+### Acessar a imagem pelo navegador
 
 > `~$ docker run -p 8080:8080 'imageID'`  
 _obs: '8080' foi especificado dentro da pasta com o código_
@@ -41,6 +46,8 @@ _Encaminhar solicitações 8080 de entrada do host local para 8080 dentro do con
 
 ## Aula 48
 
+### [Dockerfile] - WORKDIR
+
 Não é uma boa prática copiar tudo que está no seu sistema de arquivos local para o sistema de arquivos do contêiner temporário, já que alguma pasta pode conflitar.  
 Para isso adicionar após FROM: 
 
@@ -48,6 +55,7 @@ Para isso adicionar após FROM:
 
 ## Aula 49 - 50
 
+### Faça isso antes de reconstruir a imagem
 Quando fizer uma alteração no código fonte do seu projeto, para não baixar todas as dependências novamente no processo de contrução `build`:
 
 para isso especificar na etapa incial de COPY a única coisa que quer copiar (arquivo não modificado)

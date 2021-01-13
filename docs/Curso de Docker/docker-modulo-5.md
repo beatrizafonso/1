@@ -1,6 +1,10 @@
+# Módulo 5
+
 ## Aula 53
 
-Para imprimir a quantidade de visitas, foi feito o codio em node.js e a 'dockerfile' ficou da seguinte maneira que já foi ensinado antes:
+### APP: Quantidade de visitas no site
+
+Para imprimir a quantidade de visitas, foi feito o codigo em node.js e a 'dockerfile' ficou da seguinte maneira que já foi ensinado antes:
 
 >FROM node:alpine
 
@@ -27,6 +31,8 @@ _funciona da mesma maneira que docker CLI, mas permite que vc emite vários coma
 
 ## Aula 55
 
+### Docker-Compose
+
 Para utilizar o docker compose, vamos executar os mesmos comandos de antes, porém vamos coduficá-los  em um arquivo do diretório do projeto (`docker-compose.yml`).
 
 A pasta ficará da seguinte maneira:
@@ -51,12 +57,14 @@ Para conectar essa nova pasta ao código fonte deverá ser colocar dentro da pas
 
 ## Aula 57
 
+### [Docker-compose] - Criando a imagem
+
 para criar nossa imagem:
 
 1. rodar docker compose
 
 > `~$ docker-compose up`  
-_se precisar reconstruir: docker-compose up --build_
+_se precisar reconstruir: `docker-compose up --build`_
 
 > `~$ docker run 'imagem'`
 
@@ -68,17 +76,17 @@ para reconstruir a imagem
 
 ## Aula 58 
 
-Iniciar um grupo de contêiners em segundo plano:
+### Iniciar um grupo de contêiners em segundo plano
 
 > `~$ docker-compose up -d`
 
-Parar contêiners
+### Parar contêiners
 
 > `~$ docker-compose down`
 
 ## Aula 59 
 
-Para evitar que o cntêiner trave, é possivel adicionar os seguintes codigos dentro do codigo fonte da pasta index.js:
+Para evitar que o contêiner trave, é possivel adicionar os seguintes codigos dentro do codigo fonte da pasta index.js:
 Assim o servidor sairá automaticamente sempre que algo de errado ocorrer.
 
 const process = require('process');  
@@ -87,6 +95,7 @@ process.exit(0);
 
 ## Aula 60 
 
+### [Docker-compose] - Reiniciar o contêiner automaticamente
 Para o contêiner reiniciar automaticamente:
 
 `version: '3'  
@@ -107,6 +116,6 @@ _- `unless-stopped`: sempre reiniciar a não ser que alguém o force a parar_
 
 ## Aula 61 
 
-- status dos contêiners que estão em execução dentro do docker:
+### Status dos contêiners em execução
 
 > `~$ docker-compose ps`

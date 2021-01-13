@@ -1,6 +1,8 @@
+# Módulo 3
+
 ## Aula 30
 
-- criando imagens no docker 
+### Criando imagens no docker 
 
 **1.** criar um diretório:
 
@@ -46,9 +48,13 @@ usamos o `build` para obter um arquivo do docker e gerar uma imagem a partir del
 
 ## Aula 35
 
+### Reconstruindo a imagem
+
 Ao reconstruir uma imagem (caso tenha colocado um comando adicional) tentar colocar sempre em ordem, para que não tenha que instalar tudo de novo. 
 
 ## Aula 36
+
+### Imagem com tag 
 
 Para colocar uma tag em uma imagem e não precisar colocar o ID sempre que quiser rodar ela:
 
@@ -61,7 +67,7 @@ Depois disso, para rodar a imagem basta:
 
 ## Aula 38 
 
-Gerar uma imagem manualmente:
+### Gerar uma imagem manualmente
 
 **1.** 
 
