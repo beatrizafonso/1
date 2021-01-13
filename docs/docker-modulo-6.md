@@ -24,7 +24,7 @@ Depois desse processo, já foi instalada todas as dependencia no diretório do p
 
 ## Aula 71 
 
-Para rodar o contêiner 
+Para rodar o contêiner:
 
 > `~$ docker run -it -p 3000:3000 CONTAINER_ID`
 
@@ -34,7 +34,7 @@ Para as mudanças feitas no código atualizarem automaticamente:
 
 > `~$ docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app 'image ID'`
 
-Comandos adicionais
+Comandos adicionais:
 
 - _`-v$(pwd):/app` : para obter o diretório de trabalho atual ou o caminho para ele, pegar tudo que está dentro da pasta e mapear para a pasta do aplicativo em execução_
 
@@ -44,7 +44,6 @@ Comandos adicionais
 
 Para facilitar o código acima vamos usar dockercompse.yml
 
-- 
 `version: '3'  
 services:  
   web:   
@@ -55,9 +54,8 @@ services:
      - "3000:3000"  
     volumes:   
      - /app/node_modules  
-     - .:/app  `
+     - .:/app`
   
-- 
 
 Assim, basta rodar:
 
@@ -86,8 +84,7 @@ Assim nós podemos manipular os testes feitos no nosso contêiner
 Uma segunda solução, para não precisar realizar os testes manualmente:
 
 Criar um segundo serviço para executar nossos testes dentro da 'dockercompose.yml'
-
-- 
+ 
 `tests:  
     build:  
       context: .  
@@ -96,8 +93,6 @@ Criar um segundo serviço para executar nossos testes dentro da 'dockercompose.y
       - /app/node_modules  
       - .:/app  
     command: ["npm", "run", "test"]`  
-
-- 
 
 Para reconstruir: 
 
@@ -119,19 +114,15 @@ A partir daí você conseguirá executar comando dentro desse contêiner em exec
 
 Para criar uma compilação de múltiplas etapas dentro da 'dockerfile'
 
-- 
-
-`FROM node:alpine  
-WORKDIR '/app'  
-COPY package.json .  
-RUN npm install  
-COPY . .  
-RUN npm run build  
+> FROM node:alpine  
+> WORKDIR '/app'  
+> COPY package.json .  
+> RUN npm install  
+> COPY . .  
+> RUN npm run build  
  
-FROM nginx  
-COPY --from=0 /app/build /usr/share/nginx/html`
-
-- 
+> FROM nginx  
+> COPY --from=0 /app/build /usr/share/nginx/html
 
 ## Aula 91
 

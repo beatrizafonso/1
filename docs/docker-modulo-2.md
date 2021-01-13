@@ -3,7 +3,7 @@
 1. Criar e executar um contêiner usando uma imagem:
 
 > `~$ docker run 'image name'`
-- exemplo: docker run hello-world
+- exemplo: `docker run hello-world`
 
 ## Aula 15
 
@@ -12,11 +12,11 @@
 
 > `~$ docker run 'image name' command!`
 
-- exemplo: docker run busybox echo hi there
+- exemplo: `docker run busybox echo hi there`
 
 _`ls`: irá aparecer todos os arquivos e diretórios dentro de um determinado diretório_
 
-- exemplo: docker run busybox ls
+- exemplo: `docker run busybox ls`
 
 Irá aparecer diretórios que estarão dentro do seu contêiner
 

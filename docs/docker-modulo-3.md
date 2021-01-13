@@ -2,35 +2,35 @@
 
 - criando imagens no docker 
 
-1. criar um diretório:
+**1.** criar um diretório:
 
 > `~$ mkdir 'nome do diretorio'`
 
-2. mudar para o diretório criado 
+**2.** mudar para o diretório criado 
 
 > `~$ cd 'nome do diretório'`
 
-3. iniciar o editor de código dentro dessa pasta
+**3.** iniciar o editor de código dentro dessa pasta
 
 > `~$ code .`
 
-4. criar uma pasta (Dockerfile) sem extensão no seu editor de texto e começar a criar a imagem
+**4.** criar uma pasta (Dockerfile) sem extensão no seu editor de texto e começar a criar a imagem
 
 Dentro da pasta: 
 
-1. Usar uma imagem existente como base (utilizar uma imagem de acordo com as suas nessecidades, 'alpine' tem as configurações desejadas para o que queremos executar) 
+**1.** Usar uma imagem existente como base (utilizar uma imagem de acordo com as suas nessecidades, 'alpine' tem as configurações desejadas para o que queremos executar) 
 
 > FROM 'nome da imagem' (from alpine)
 
-2. baixar e instalar uma dependencia (rodar um comando que existe dentro da imagem) 
+**2.** baixar e instalar uma dependencia (rodar um comando que existe dentro da imagem) 
 
 > RUN apk add --update redis 
 
-3. falar à imagem o que fazer quando inicializar o contêiner 
+**3.** falar à imagem o que fazer quando inicializar o contêiner 
 
 > CMD ["redis-server"]
 
-4. salvar o arquivo e ir para o terminal
+**4.** salvar o arquivo e ir para o terminal
 
 > `~$ docker build .`
 
@@ -63,12 +63,12 @@ Depois disso, para rodar a imagem basta:
 
 Gerar uma imagem manualmente:
 
-1. 
+**1.** 
 
 > `~$ docker run -it alpine sh` 
 > `/# apk add --update redis`
 
-2. abrir um segundo terminal:
+**2.** abrir um segundo terminal:
 
 > `~$ docker ps`  
 _(para ver os contêiners que estão rodando)_

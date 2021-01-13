@@ -22,7 +22,7 @@ Para o aplicativo rodar é necessário registrar um segundo contêiner para exec
 
 > `~$ docker run redis`
 
-- vamos utilizar docker compose  
+- vamos utilizar **docker compose**.  
 _funciona da mesma maneira que docker CLI, mas permite que vc emite vários comandos mais rapidamente._
 
 ## Aula 55
@@ -55,7 +55,7 @@ para criar nossa imagem:
 
 1. rodar docker compose
 
-> `~$ docker-compose up`
+> `~$ docker-compose up`  
 _se precisar reconstruir: docker-compose up --build_
 
 > `~$ docker run 'imagem'`
