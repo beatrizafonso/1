@@ -1,6 +1,7 @@
 site_name: Cursos-Wine
 
 theme:
+  name: material
   palette:
 
     # Toggle light mode
