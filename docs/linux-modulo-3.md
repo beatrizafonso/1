@@ -84,7 +84,7 @@ _`shift + Q` + digitar `wq!` + enter : para sair do editor_
 > `~$ find / -name "'arquivo'"`  
 _quando não se sabe o diretório, esse comando procura em 'root'. (precisa da permissão do su)_
 
-> _~$ locate 'arquivo/diretório'_
+> `~$ locate 'arquivo/diretório'`
 
 - obs: o `locate` é mais rápido que o `find`, porém precisa atualizar sempre que criar um novo arquivo ou diretório:
 
