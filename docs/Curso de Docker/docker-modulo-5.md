@@ -6,15 +6,17 @@
 
 Para imprimir a quantidade de visitas, foi feito o codigo em node.js e a 'dockerfile' ficou da seguinte maneira que já foi ensinado antes:
 
->FROM node:alpine
+```
+FROM node:alpine
 
->WORKDIR '/app'
+WORKDIR '/app'
 
->COPY package.json .
->RUN npm install
->COPY . .
+COPY package.json .
+RUN npm install
+COPY . .
 
->CMD ["npm","start"]
+CMD ["npm","start"]
+```
 
 Depois vamos contruir a imagem com uma tag 
 
@@ -37,23 +39,30 @@ Para utilizar o docker compose, vamos executar os mesmos comandos de antes, por�
 
 A pasta ficará da seguinte maneira:
 
-`version: '3'
+```
+version: '3'
 services:
   redis-server:
     image: 'redis'
   node-app:
     build: .
     ports:
-      - '4001:8081'`
+      - '4001:8081'
+```
+
 
 ## Aula 56
 
 Para conectar essa nova pasta ao código fonte deverá ser colocar dentro da pasta index.js (no local que está especificando o redis):
 
-`{  
+
+```
+{  
   host: 'redis-server',  
   port: 6379  
-}`
+}
+```
+
 
 ## Aula 57
 
@@ -98,7 +107,8 @@ process.exit(0);
 ### [Docker-compose] - Reiniciar o contêiner automaticamente
 Para o contêiner reiniciar automaticamente:
 
-`version: '3'  
+```
+version: '3'  
 services:  
   redis-server:  
     image: 'redis'  
@@ -106,7 +116,8 @@ services:
     restart: on-failure  
     build: .  
     ports:  
-      - '4001:8081'`  
+      - '4001:8081'
+```
 
 - Algumas mensagens para reiniciar  
 _- `no` : não reiniciar_  

@@ -14,7 +14,9 @@
 ### ERRO - npm: not found
 Há um erro comum na nova versão do Node, e pode aparecer a seguinnte mensagem quando construimos 'build' nossa 'dockerfile'
 
-_npm: not found_
+```
+npm: not found
+```
 
 Para resolver esse problema:
 
@@ -42,7 +44,7 @@ Depois disso, a imagem é criada porém não conseguimos acessá-la no navegador
 _obs: '8080' foi especificado dentro da pasta com o código_
 
 O que significa 8080:808O?  
-_Encaminhar solicitações 8080 de entrada do host local para 8080 dentro do contêiner (as solicitações sem sempre são inguais)_
+_Encaminhar solicitações 8080 de entrada do host local para 8080 dentro do contêiner (as solicitações nem sempre são inguais)_
 
 ## Aula 48
 
@@ -60,8 +62,8 @@ Quando fizer uma alteração no código fonte do seu projeto, para não baixar t
 
 para isso especificar na etapa incial de COPY a única coisa que quer copiar (arquivo não modificado)
 
-> COPY ./package.json ./
-
-> RUN npm install
-
-> COPY ./ ./
+```
+COPY ./package.json ./
+RUN npm install
+COPY ./ ./
+```

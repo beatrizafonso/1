@@ -54,7 +54,8 @@ Comandos adicionais:
 
 Para facilitar o código acima vamos usar dockercompose.yml
 
-`version: '3'  
+```
+version: '3'  
 services:  
   web:   
     build:   
@@ -64,8 +65,8 @@ services:
      - "3000:3000"  
     volumes:   
      - /app/node_modules  
-     - .:/app`
-  
+     - .:/app
+```
 
 Assim, basta rodar:
 
@@ -99,14 +100,16 @@ Uma segunda solução, para não precisar realizar os testes manualmente:
 
 Criar um segundo serviço para executar nossos testes dentro da 'dockercompose.yml'
  
-`tests:  
+```
+tests:  
     build:  
       context: .  
       dockerfile: Dockerfile.dev  
     volumes:  
       - /app/node_modules  
       - .:/app  
-    command: ["npm", "run", "test"]`  
+    command: ["npm", "run", "test"]
+```
 
 Para reconstruir: 
 
@@ -130,16 +133,18 @@ A partir daí você conseguirá executar comando dentro desse contêiner em exec
 
 Para criar uma compilação de múltiplas etapas dentro da 'dockerfile'
 
-> FROM node:alpine  
-> WORKDIR '/app'  
-> COPY package.json .  
-> RUN npm install  
-> COPY . .  
-> RUN npm run build  
+```
+FROM node:alpine  
+WORKDIR '/app'  
+COPY package.json .  
+RUN npm install  
+COPY . .  
+RUN npm run build  
  
-> FROM nginx  
-> COPY --from=0 /app/build /usr/share/nginx/html
+FROM nginx  
+COPY --from=0 /app/build /usr/share/nginx/html
 
+```
 ## Aula 91
 
 executar NginX

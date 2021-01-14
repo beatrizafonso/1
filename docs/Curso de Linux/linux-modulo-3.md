@@ -53,10 +53,11 @@ _`cd /` : voltar ao direorio principal_
 
 > `~$ ls -l`
 
-- `drwxr-xr-x   2 root root       4096 dez 31 10:56 bin`
+```
+drwxr-xr-x   2 root root       4096 dez 31 10:56 bin
 
- tipo de arquivo - quantidade de links - proprietário - grupo - tamanho - mês - dia - horário - nome
-
+tipo de arquivo - quantidade de links - proprietário - grupo - tamanho - mês - dia - horário - nome
+```
 primeira coluna - quando começa com:  
 - `d` : diretório  
 - `l` : link  
