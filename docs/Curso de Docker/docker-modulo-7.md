@@ -101,7 +101,7 @@ secret_access_key : $ AWS_SECRET_KEY
 
 **Para encontrar o bucket_path**:  
 
-`site AWS > services > search s3 > buscar o nome mais parecido > pasta com nome do projeto`
+`site AWS > services > search s3 > buscar o nome mais parecido > pasta com nome do projeto`  
 _obs: pode acontecer da pasta não ser criada, nessa ocasião utilizar o nome do app_
 
 **Gerar chaves da API**:  
@@ -109,11 +109,10 @@ _(aula 105)_
 
 `site AWS > services > search IAM > users > add user`
 
-- Processo para adiciociar usuário:  
+* Processo para adiciociar usuário:  
 _add user > colocar o nome > Programmatic Acess > Next:permissions > AttachExisting Polices Directly > Procurar por beanstalk > marcar caixa ao lado de AWSElasticBeanstalkFullAcess > Next:tags > Next:review > create user_
 
-* Depois que as chaves são geradas é preciso escondê-las e não utiliza-las direto na pasta, para isso:
-
+* Depois que as chaves são geradas é preciso escondê-las e não utiliza-las direto na pasta, para isso:  
 Travis dashboard > more options > settings > enviroment variables
 
 - Após isso, fazer o push para o GitHub e observar o programa rodando no Travis CI
