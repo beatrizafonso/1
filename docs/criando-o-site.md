@@ -10,8 +10,10 @@ _será criada uma pasta docs (com o arquivo `index.md`) e um arquivo m`kdocs.yml
 
 **3.** Par ativar o tema, o `mkdocs.yml` começará assim:
 
-`theme:
-  name: material`
+```
+theme:
+  name: material
+```
 
 **4.** Para ver as alterações em tempo real:
 
