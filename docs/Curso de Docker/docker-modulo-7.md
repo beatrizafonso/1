@@ -136,7 +136,7 @@ COPY --from=0 /app/build /usr/share/nginx/html
 ```
 
 ### Trabalhando com uma equipe  
-_(Aula 110 - 111)_
+_(Aula 108 - 111)_
 
 1. Criar um branch no GitHub para fazer o push das mudanças no código
 
