@@ -138,10 +138,15 @@ COPY --from=0 /app/build /usr/share/nginx/html
 ### Trabalhando com uma equipe  
 _(Aula 108 - 111)_
 
-1. Criar um branch no GitHub para fazer o push das mudanças no código
+**1.** Criar um branch no GitHub para fazer o push das mudanças no código
 
-2. Após o push entrar no repositório do gitHub > 'Compare & pull request' > 'Create Pull Request'
+> `git checkout -b 'nome da branch'`
+> `git add .` 
+> `git commit -m "comentario"`
+> `git push origin 'nome da branch'`
 
-3. Depois do código passar pelas verificações > 'Merge pull request'
+**2.** Após o push entrar no repositório do gitHub > 'Compare & pull request' > 'Create Pull Request'
 
-4. Verificar o Travis CI e se AWS foi atualizado
+**3.** Depois do código passar pelas verificações > 'Merge pull request'
+
+**4.** Verificar o Travis CI e se AWS foi atualizado
