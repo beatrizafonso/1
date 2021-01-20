@@ -150,5 +150,9 @@ _ex: kubectl set image deployment/client-deployment client=beatrizafonso/multi-c
 - set: atualizar uma propriedade em um dos nossos obejtos
 - image: especificação do que queremos atualizar, neste caso é a 'image'
 
-para acessar basta rodar: `mikube ip`, copiar o código e pesquisar no navegador 'codigo':'nodePort' (ex: 192.168.99.100:31515) > pode demorar um pouco
+para acessar basta rodar: `minikube ip`, copiar o código e pesquisar no navegador 'codigo':'nodePort' (ex: 192.168.99.100:31515) > pode demorar um pouco
 
+Reconfigurar o Docker CLI para se comunicar com o docker server:
+
+> ~$ `eval $(minikube docker-env)`  
+_Só vai reconfigurar momentaneamente no terminal_ 
