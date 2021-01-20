@@ -23,8 +23,7 @@ _obs: antes de começar as modificações é bom fazer uma cópia da pasta para 
 
 2. Criar um nova pasta `k8s`; dentro dela criar 1 arquivo para cada objeto que estará dentro do nó:
 
-### arquivo de deploy 
-`client-deployment.yaml`
+### exemplo de arquivo de deploy .yaml
 
 ```
 apiVersion: apps/v1 
@@ -55,10 +54,10 @@ _(aula 224)_
     - ClusterIP: expõe um conjunto de Pods a outros objetos no cluster;
     - NodePort: Expõe um conjunto de Pods para o mundo externo.
 
-#### ClusterIP
+### Exemplo de arquivo de ClusterIP .yaml
 _(aula 225)_
 
-- Criando um arquivo de configurção do tipo ClusterIP > dentro da pasta k8s > `client-cluster-ip-service.yaml`:
+- Criando um arquivo de configurção do tipo ClusterIP > dentro da pasta k8s 
 
 ```
 apiVersion: apps/v1 
@@ -73,10 +72,14 @@ spec:
         - port: 3000
             targetPort: 3000
 ```
- 
+ _selector: especifica o seletor que o deploy usará para encontrar de pods que vai controlar._
+
+
+_obs: quando o arquivo não precisar ser associado a nenhum outro arquivo, não é necesssário especificar a porta_
+
 Para checar se estão funcionando (aula 226):
 
-_deletar todos os deplouyments_:
+_deletar todos os deployments_:
 > ~$ `kubectl get deployments`  
 > ~$ `kubectl delete 'tipo de objeto' 'nome'`
 
@@ -85,62 +88,19 @@ _deletar todos os serviços:_
     _deixar apenas o tipo clusterIP:_   
 > ~$ `kubectl delete 'tipo' 'nome'`
 
-_agora estamos prontos para aplicar:_
-> ~$ `kubectl apply -f k8s` (nome da pastas)
+> ~$ `kubectl apply -f 'nome da pasta'`
 
-_Para checar:_
- `kubectl get deployments`
- `kubectl get pods`
- `kubectl get services`
+Para ver se os arquivos estão rodando normalmente: 
 
-Aquivo de deploy
-(aula 227 e 228)
+> ~$ `kubectl get pods`
+> ~$ `kubectl get deployments`
+> ~$ `kubectl get services`
 
-`server-deployment.yaml`
+> ~$ `kubectl logs 'nome'`(aparece quando rodamos kubectl get pods)
 
-```
-apiVersion: apps/v1 
-kind: Deployment
-metadata: 
-    name: server-deployment
-spec:
-    replicas: 3
-    selector:
-        matchLabels:
-            component: server
-    template:
-        metabase:
-            labels:
-                componet: server
-        spec: 
-            containers:
-                - name: server
-                    image: beatrizafonso/multi-server
-                    ports:
-                        - containerPort: 5000
-```
-_selector: especifica o seletor que o deploy usará para encontrar de pods que vai controlar._
-
-Arquivo de ClusterIP Service: 
-
-k8s > `server-cluster-ip-service.yaml`
-
-```
-apiVersion: apps/v1 
-kind: Service
-metadata: 
-    name: server-cluster-ip-service
-spec:
-    type: ClusterIP
-    selector:
-        component: server
-    ports:
-        - port: 5000
-            targetPort: 5000
-```
 
 ### Combinar arquivos em 1 único arquivo
-é possível combinar os arquivos de deploy e de clusterID em um unico arquivo basta separá-los com '---' como feito abaixo > `server-config.yaml`
+é possível combinar os arquivos de deploy e de clusterID em um unico arquivo basta separá-los com '---' como feito abaixo > `.yaml`
 
 ```
 apiVersion: apps/v1 
@@ -176,34 +136,7 @@ spec:
             targetPort: 5000
 ```
 
-### Worker Deployment
-(Aula 230)
-
-k8s > `worker-deployment.yaml`
-
-```
-apiVersion: apps/v1 
-kind: Deployment
-metadata: 
-    name: worker-deployment
-spec:
-    replicas: 1
-    selector:
-        matchLabels:
-            component: worker
-    template:
-        metabase:
-            labels:
-                componet: worker
-        spec: 
-            containers:
-                - name: worker
-                    image: beatrizafonso/multi-worker
-```
-
-_obs: essa pasta não precisa ser associado a uma porta, já que nao existe outro arquivo para acessá-la_
-
-### Repply dos arquivos
+#### Repply dos arquivos
 
 > ~$ `kubectl apply -f 'nome da pasta'`
 
@@ -212,3 +145,5 @@ Para ver se os arquivos estão rodando normalmente:
 > ~$ `kubectl get pods`
 > ~$ `kubectl get deployments`
 > ~$ `kubectl get services`
+
+> ~$ `kubectl logs 'nome'`(aparece quando rodamos kubectl get pods)
