@@ -1,0 +1,892 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>Módulo 14 - Cursos-Wine</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-14" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Cursos-Wine" class="md-header-nav__button md-logo" aria-label="Cursos-Wine">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Cursos-Wine
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Módulo 14
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cursos-Wine" class="md-nav__button md-logo" aria-label="Cursos-Wine">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Cursos-Wine
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        Sobre o site
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../criando-o-site/" class="md-nav__link">
+        Criando o site
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        Curso de Docker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Curso de Docker" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Curso de Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-introducao/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-modulo-1/" class="md-nav__link">
+        Módulo 1
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-modulo-12/" class="md-nav__link">
+        Módulo 12
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-modulo-13/" class="md-nav__link">
+        Módulo 13
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Módulo 14
+      </a>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-modulo-2/" class="md-nav__link">
+        Módulo 2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-modulo-3/" class="md-nav__link">
+        Módulo 3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-modulo-4/" class="md-nav__link">
+        Módulo 4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-modulo-5/" class="md-nav__link">
+        Módulo 5
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-modulo-6/" class="md-nav__link">
+        Módulo 6
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-modulo-7/" class="md-nav__link">
+        Módulo 7
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-modulo-8/" class="md-nav__link">
+        Módulo 8
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-modulo-9/" class="md-nav__link">
+        Módulo 9
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Curso de Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Curso de Linux" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Curso de Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Curso%20de%20Linux/linux-introducao/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Curso%20de%20Linux/linux-modulo-3/" class="md-nav__link">
+        Módulo 3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Curso%20de%20Linux/linux-modulo-4/" class="md-nav__link">
+        Módulo 4
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="modulo-14">Módulo 14</h1>
+<h1 id="criacao-de-um-app-multi-containers-com-o-kubernetes">Criação de um app multi-containers com o Kubernetes</h1>
+<h2 id="caminho">Caminho</h2>
+<ol>
+<li>Criar os arquivos de configuração e de deploy;</li>
+<li>Testar localmente no minikube;</li>
+<li>Criar um repo no githhub &gt; Travis CI para construir as imagens e fazer o deploy;</li>
+<li>
+<p>Fazer o deploy para o provedor de nuvem.</p>
+</li>
+<li>
+<p>Depois de entrar na pasta do projeto, para checar se está tudo funcionando:</p>
+</li>
+</ol>
+<blockquote>
+<p>~$ <code>docker-compose up --build</code></p>
+<p>~$ <code>docker-compose up</code> </p>
+</blockquote>
+<p>A partir daí é possivel acessar no navegador: <code>localhost:3050</code></p>
+<p><em>obs: antes de começar as modificações é bom fazer uma cópia da pasta para que sirva como backup</em></p>
+<ol>
+<li>
+<p>Limpar alguns arquivos criados anteriormente que não são mais necessários: <code>travis.yml</code> ; <code>docker-compose.yml</code> ; <code>dockerrun.aws.jason .</code> ; pasta <code>NginX</code> .</p>
+</li>
+<li>
+<p>Criar um nova pasta <code>k8s</code>; dentro dela criar 1 arquivo para cada objeto que estará dentro do nó:</p>
+</li>
+</ol>
+<h2 id="exemplo-de-arquivo-de-deploy-yaml">exemplo de arquivo de deploy .yaml</h2>
+<pre><code>apiVersion: apps/v1 
+kind: Deployment
+metadata: 
+    name: client-deployment
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            component: web
+    template:
+        metabase:
+            label:
+                componet: web
+        spec: 
+            containers:
+                - name: client
+                    image: beatrizafonso/multi-client
+                    ports:
+                        - containerPort: 3000
+</code></pre>
+<h2 id="tipos-de-objetos">Tipos de objetos:</h2>
+<p><em>(aula 224)</em>
+- Pods: Roda 1 ou mais contaners associados;
+- Services: configura a rede no kebernetes;
+    - ClusterIP: expõe um conjunto de Pods a outros objetos no cluster;
+    - NodePort: Expõe um conjunto de Pods para o mundo externo.</p>
+<h2 id="exemplo-de-arquivo-de-clusterip-yaml">Exemplo de arquivo de ClusterIP .yaml</h2>
+<p><em>(aula 225)</em></p>
+<ul>
+<li>Criando um arquivo de configurção do tipo ClusterIP &gt; dentro da pasta k8s</li>
+</ul>
+<p><code>client-cluster-ip-service.yaml</code>:</p>
+<pre><code>apiVersion: apps/v1 
+kind: Deployment
+metadata: 
+    name: client-cluster-ip-service
+spec:
+    type: ClusterIP
+    selector:
+        component: web
+    ports:
+        - port: 3000
+            targetPort: 3000
+</code></pre>
+<p><em>selector: especifica o seletor que o deploy usará para encontrar de pods que vai controlar.</em></p>
+<p><em>obs: quando o arquivo não precisar ser associado a nenhum outro arquivo, não é necesssário especificar a porta</em></p>
+<h3 id="checar-se-o-arquivo-criado-esta-funcionando">Checar se o arquivo criado está funcionando</h3>
+<p><em>(aula 226)</em></p>
+<p><em>deletar todos os deployments</em>:</p>
+<blockquote>
+<p>~$ <code>kubectl get deployments</code><br />
+~$ <code>kubectl delete 'tipo de objeto' 'nome'</code></p>
+</blockquote>
+<p><em>deletar todos os serviços:</em></p>
+<blockquote>
+<p>~$ <code>kubectl get services</code><br />
+<em>deixar apenas o tipo clusterIP:</em> <br />
+~$ <code>kubectl delete 'tipo' 'nome'</code></p>
+<p>~$ <code>kubectl apply -f 'nome da pasta'</code></p>
+</blockquote>
+<p>Para ver se os arquivos estão rodando normalmente: </p>
+<blockquote>
+<p>~$ <code>kubectl get pods</code>
+~$ <code>kubectl get deployments</code>
+~$ <code>kubectl get services</code></p>
+<p>~$ <code>kubectl logs 'nome'</code>(aparece quando rodamos kubectl get pods)</p>
+</blockquote>
+<h3 id="combinar-arquivos-em-1-unico-arquivo">Combinar arquivos em 1 único arquivo</h3>
+<p>é possível combinar os arquivos de deploy e de clusterID em um unico arquivo basta separá-los com '---' como feito abaixo &gt; <code>server-deployment.yaml</code></p>
+<pre><code>apiVersion: apps/v1 
+kind: Deployment
+metadata: 
+    name: server-deployment
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            component: server
+    template:
+        metabase:
+            labels:
+                componet: server
+        spec: 
+            containers:
+                - name: server
+                    image: beatrizafonso/multi-server
+                    ports:
+                        - containerPort: 5000
+---
+apiVersion: apps/v1 
+kind: Service
+metadata: 
+    name: server-cluster-ip-service
+spec:
+    type: ClusterIP
+    selector:
+        component: server
+    ports:
+        - port: 5000
+            targetPort: 5000
+</code></pre>
+<h2 id="repply-dos-arquivos">Repply dos arquivos</h2>
+<blockquote>
+<p>~$ <code>kubectl apply -f 'nome da pasta'</code></p>
+</blockquote>
+<p>Para ver se os arquivos estão rodando normalmente: </p>
+<blockquote>
+<p>~$ <code>kubectl get pods</code>
+~$ <code>kubectl get deployments</code>
+~$ <code>kubectl get services</code></p>
+<p>~$ <code>kubectl logs 'nome'</code>(aparece quando rodamos kubectl get pods)</p>
+</blockquote>
+<h2 id="pvc-persistent-volume-claim">PVC (Persistent Volume Claim)</h2>
+<p>É importante ter esses volumes com bancos de dados para que não haja perda de dados, caso o Pod ou Contêiner travar.</p>
+<p>obs: Se você quiser aumentar o número de replicas, é preciso adicionar algumas configurações adicionais,e não apenas modificar o numero no arquivo.</p>
+<h3 id="volume-em-kubernetes">Volume em Kubernetes</h3>
+<p>É um objeto que permite o contêiner armazenar dados, podemos criar um arquivo de configuração para ele. </p>
+<h3 id="persistent-volume">Persistent Volume</h3>
+<p>Um objeto aonde criamos algum tipo de armazenamento durável que não é vinculado a nenhum Pod ou contêiner. Assim se algo travar, os dados estarão seguros e será recriado o contêiner ou Pod.</p>
+<h3 id="persistent-volume-claim">Persistent Volume Claim</h3>
+<p>(238 - 241)</p>
+<p>Nada é armazenado no PVC, ele apenas tem informações dos dados disponíveis que você pode solicitar dentro do arquivo de configuração do Pod. Assim, o Kubernetes irá 'procurar' nos <em>Persistent Volumes</em> existentes ou tentará criá-lo em tempo real.</p>
+<p>arquivo PVC dentro de k8s:
+<code>database-persistent-volume-claim.yaml</code>:</p>
+<pre><code>apiVersion: v1 
+kind: PersistentVolumeClaim
+metadata:
+    name: database-persistent-volume-claim
+spec:
+    acessModes:
+        - ReadWriteOnce
+    resources:
+        requests:
+            storage: 2Gi
+</code></pre>
+<ul>
+<li>
+<p>acessModes: </p>
+<ul>
+<li>ReadWriteOnde: Lê e grava as infos no volume e pode ser usada por um único nó de cada vez;</li>
+<li>ReadOnlyMany: Apenas lê a informação e pode ser usado pozr múltiploa nós;</li>
+<li>ReadWriteMany: Lê e grava a info e pode ser usado por múçtiplos nós.</li>
+</ul>
+</li>
+<li>
+<p>Storage: fala o espaço que as infos recebidas tem que ter.</p>
+</li>
+</ul>
+<h4 id="designando-o-pvc-a-um-arquivo">Designando o PVC a um arquivo</h4>
+<p><em>(aula 242)</em></p>
+<p>Pegaremos um arquivo de deploy que exemplificamos anteriormente para adicionar a aba 'volumes':</p>
+<p><code>postgres-deployment.yaml</code>:</p>
+<pre><code>apiVersion: apps/v1 
+kind: Deployment
+metadata: 
+    name: postgres-deployment
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            component: postgres
+    template:
+        metabase:
+            label:
+                componet: postgres
+        spec: 
+            volumes: 
+                - name: postgres-storage
+                    persistentVolumeClaim
+                        claimName: database-persistent-volume-claim
+            containers:
+                - name: postgres
+                    image: postgres
+                    ports:
+                        - containerPort: 5432
+                    volumeMounts:
+                        - name: postgres-storage
+                            mountPath: /var/lib/postgresql/data
+                            subPath: postgres
+</code></pre>
+<h4 id="apply-do-pvc">Apply do PVC</h4>
+<blockquote>
+<p>~$ <code>kubectl apply -f 'nome da pasta'</code></p>
+<p>~$ <code>kubectl get pods</code></p>
+<p>~$ <code>kubectl get pv</code><br />
+<em>(persistent volume)</em></p>
+<p>~$ <code>kubectl get pvc</code><br />
+<em>(persistent volume claim)</em></p>
+</blockquote>
+<h2 id="enviroment-variables">Enviroment Variables</h2>
+<p>adicionando em um arquivo de exemplo:</p>
+<pre><code>apiVersion: apps/v1 
+kind: Deployment
+metadata: 
+    name: worker-deployment
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            component: worker
+    template:
+        metabase:
+            labels:
+                componet: worker
+        spec: 
+            containers:
+                - name: worker
+                    image: beatrizafonso/multi-worker
+                    env: 
+                        - name: REDIS_HOST
+                            value: redis-cluster-ip-service
+                        - name: REDIS_PORT
+                            value: '6379'
+</code></pre>
+<p>Outro Exemplo:</p>
+<pre><code>apiVersion: apps/v1 
+kind: Deployment
+metadata: 
+    name: server-deployment
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            component: server
+    template:
+        metabase:
+            labels:
+                componet: server
+        spec: 
+            containers:
+                - name: server
+                    image: beatrizafonso/multi-server
+                    ports:
+                        - containerPort: 5000
+                    env: 
+                        - name: REDIS_HOST
+                            value: redis-cluster-ip-service
+                        - name: REDIS_PORT
+                            value: '6379'
+                        - name: PGUSER
+                            value: postgres
+                        -name: PGHOST
+                            value: postgres-cluster-ip-service
+                        - name: PGPORT
+                            value: '5432'
+                        - name: PGDATABASE
+                            value: postgres
+</code></pre>
+<h3 id="pgpassword">PGPASSWORD</h3>
+<p>(aula 246 - 248)</p>
+<p>Para armazenar com segurança algumas infos vamos utilizar um novo tipo de objeto: <strong>Secrets</strong>.</p>
+<blockquote>
+<p>~$ <code>kubectl create secret generic 'nome do segredo' --from-literal 'nome do segredo'='senha'</code><br />
+<em>(kubectl - comando imperativo - tipo de objeto - tipo de segredo - nome do segredo - escrever infos no comando - colocar senha)</em></p>
+</blockquote>
+<p>Para verificar se foi criado: </p>
+<blockquote>
+<p>~$ <code>kubectl get secrets</code></p>
+</blockquote>
+<p>Conectar o Secret com a pasta de deployment: </p>
+<p>no final da pasta criada acima, dentro de env: </p>
+<pre><code>- name: 'nome do segredo'
+    valueFrom:
+        secretKeyRef: 
+            name: 'nome do segredo'
+            key: 'nome do segredo'
+</code></pre>
+<p>na outra pasta de deployment:</p>
+<pre><code> env: 
+    - name: 'nome do segredo'
+        valueFrom:
+            secretKeyRef:
+                name: 'nome do segredo'
+                key: 'nome do segredo'
+</code></pre>
+<p>Após isso, aplicar as mudanças!</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../docker-modulo-13/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Módulo 13
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../docker-modulo-2/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Módulo 2
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
